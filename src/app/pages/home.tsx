@@ -10,6 +10,7 @@ import Teclados from './teclados'
 import BannerMobile from './componentes/bannerMobile'
 import BannerFretefree from './bannerMainFreteFree'
 import Mouses from './mouses'
+import Footer from './footer'
 
 const Page = () => {
 
@@ -26,6 +27,7 @@ const Page = () => {
                 <BannerFretefree />
                 <Mouses />
             </main>
+                <Footer />
         </>
     )
 }

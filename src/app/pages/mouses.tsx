@@ -13,12 +13,13 @@ const Mouses = () => {
         <>
             <main className='my-5' >
                 <div className='mb-2' >
-                    <h1 className='text-[#ffff] md:text-lg text-base font-bold'>TECLADOS</h1>
+                    <h1 className='text-[#ffff] md:text-lg text-base font-bold'>MOUSES</h1>
                 </div>
                 <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide' >
-                    {Products.filter(Products => Products.type === "Mouse")
-                        .sort((a, b) => Math.random() - 0.5)
+                    {Products
+                        .filter(Products => Products.type === "Mouse")
                         .slice(0, 6)
+                        .sort((a, b) => Math.random() - 0.5)
                         .map((info) => (
                             <div key={info.id}>
                                 <div className='bg-[#1a1a1a] min-w-[156px] min-h-[170px] md:min-w-[180px] md:min-h-[190px] rounded-lg flex items-center justify-center hover:scale-95 duration-200 cursor-pointer' >
