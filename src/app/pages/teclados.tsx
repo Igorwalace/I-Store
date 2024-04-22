@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 //Pages
-import { Products } from './ArrayProducts'
+import { Products } from './produtos/ArrayProducts'
 
 //React icons
 import { FaRegStar, FaStar } from 'react-icons/fa'

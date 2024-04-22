@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import InfoBannerMobile from './infoBannerMobile'
+import InfoBannerMobile from './componentes/infoBannerMobile'
 
 const BannersMain = () => {
     return (

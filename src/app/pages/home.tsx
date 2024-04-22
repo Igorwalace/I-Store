@@ -2,12 +2,12 @@ import React from 'react'
 
 //Imports
 import Header from './header'
-import Banner from './banner'
+import Banner from './componentes/banner'
 import Categorias from './categorias'
 import Ofertas from './ofertas'
 import BannersMain from './bannersMain'
 import Teclados from './teclados'
-import BannerMobile from './bannerMobile'
+import BannerMobile from './componentes/bannerMobile'
 
 const Page = () => {
 
