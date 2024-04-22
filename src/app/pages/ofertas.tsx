@@ -28,8 +28,8 @@ const Ofertas = () => {
                                         <h1 className='md:text-sm text-xs' >{info.title}</h1>
                                     </div>
                                     <div className='flex items-center justify-between' >
-                                        <h1 className='md:text-lg text-base font-bold' >R$ {info.price}</h1>
-                                        <h1 className="md:text-sm text-xs text-[#1a1a1a] font-bold line-through">R$ {info.oldPrice}</h1>
+                                        <h1 className='md:text-lg text-base font-bold flex' >R$ {info.price}</h1>
+                                        <h1 className="md:text-sm text-xs text-[#1a1a1a] font-bold line-through flex">R$ {info.oldPrice}</h1>
                                     </div>
                                 </div>
                             </div>
