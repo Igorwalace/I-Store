@@ -81,6 +81,22 @@ export const Products = [
         oldPrice: '1029,90'
     },
     {
+        id: 10,
+        img: '/mouse_5.png',
+        title: 'Xr 2017',
+        type: 'Mouse',
+        price: 'R$ 1500,12',
+        oldPrice: '1929,90'
+    },
+    {
+        id: 10,
+        img: '/mouse_6.png',
+        title: '11 2018',
+        type: 'Mouse',
+        price: 'R$ 1200,12',
+        oldPrice: '1329,90'
+    },
+    {
         id: 9,
         img: '/phone_1.png',
         title: 'H7',

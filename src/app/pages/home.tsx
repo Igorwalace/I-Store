@@ -8,6 +8,8 @@ import Ofertas from './ofertas'
 import BannersMain from './bannersMain'
 import Teclados from './teclados'
 import BannerMobile from './componentes/bannerMobile'
+import BannerFretefree from './bannerMainFreteFree'
+import Mouses from './mouses'
 
 const Page = () => {
 
@@ -21,6 +23,8 @@ const Page = () => {
                 <BannersMain />
                 <Teclados />
                 <BannerMobile />
+                <BannerFretefree />
+                <Mouses />
             </main>
         </>
     )
