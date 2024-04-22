@@ -6,7 +6,7 @@ export const Products = [
         description: 'Aqui vai a descrição',
         type: 'KeyBoard',
         price: 'R$ 229,90',
-        oldPrice: 'R$ 329,90'
+        oldPrice: '329,90'
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ export const Products = [
         title: 'Mix Keys Mins',
         type: 'KeyBoard',
         price: 'R$ 231,22',
-        oldPrice: 'R$ 331,90'
+        oldPrice: '331,90'
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ export const Products = [
         title: 'Redragron Gamer',
         type: 'KeyBoard',
         price: 'R$ 129,10',
-        oldPrice: 'R$ 219,90'
+        oldPrice: '219,90'
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ export const Products = [
         title: 'TH83',
         type: 'KeyBoard',
         price: 'R$ 449,80',
-        oldPrice: 'R$ 529,90'
+        oldPrice: '529,90'
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ export const Products = [
         title: 'Linux cc',
         type: 'Mouse',
         price: 'R$ 279.90',
-        oldPrice: 'R$ 829,90'
+        oldPrice: '829,90'
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ export const Products = [
         title: 'HyperXCloud',
         type: 'Mouse',
         price: 'R$ 229,90',
-        oldPrice: 'R$ 329,90'
+        oldPrice: '329,90'
     },
     {
         id: 7,
@@ -54,7 +54,7 @@ export const Products = [
         title: 'Mouse Pro Max',
         type: 'Mouse',
         price: 'R$ 180,71,',
-        oldPrice: 'R$ 289,90'
+        oldPrice: '289,90'
     },
     {
         id: 8,
@@ -62,7 +62,7 @@ export const Products = [
         title: 'Mouse S23 Plus',
         type: 'Mouse',
         price: 'R$ 890,12',
-        oldPrice: 'R$ 1029,90'
+        oldPrice: '1029,90'
     },
     {
         id: 9,
@@ -70,6 +70,6 @@ export const Products = [
         title: 'H7',
         type: 'Phone',
         price: 'R$ 699,99',
-        oldPrice: 'R$ 899,90'
+        oldPrice: '899,90'
     }
 ]
