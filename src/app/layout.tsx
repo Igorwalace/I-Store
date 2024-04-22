@@ -6,8 +6,8 @@ import { AppWrapper } from '@/context/page'
 const poppins = Poppins({ subsets: ["latin"], weight: '400' });
 
 export const metadata: Metadata = {
-  title: "I-Store",
-  description: "Projeto I-Store",
+  title: "IStore",
+  description: "Projeto IStore",
 };
 
 export default function RootLayout({

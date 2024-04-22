@@ -8,9 +8,9 @@ const banner = () => {
                 <div className='hidden md:block bg-cover bg-no-repeat bg-center absolute top-0 left-0 right-0 bottom-0 opacity-[15%]' id='banner'></div>
                 <div className='flex flex-row-reverse md:flex-row items-center justify-around md:space-x-9 space-x-3' >
 
-                    <div className='text-center hidden md:block' >
-                        <h1 className='text-5xl font-bold' >ofertas </h1>
-                        <h1 className='text-5xl font-bold' >Imperdíveis</h1>
+                    <div className='text-center hidden md:block font-extrabold' >
+                        <h1 className='text-5xl' >ofertas </h1>
+                        <h1 className='text-5xl' >Imperdíveis</h1>
                     </div>
                     <div>
                         <Image
@@ -23,8 +23,8 @@ const banner = () => {
                     </div>
                     <div>
 
-                        <h1 className='md:text-2xl text-base' >até <span className='md:text-[90px] text-4xl font-bold md:leading-[25px]' >55%</span> </h1>
-                        <h1 className='md:text-6xl text-2xl font-bold md:leading-[35px] leading-3' >Desconto</h1>
+                        <h1 className='md:text-2xl text-base' >até <span className='md:text-[90px] text-4xl font-extrabold md:leading-[25px]' >55%</span> </h1>
+                        <h1 className='md:text-6xl text-2xl font-extrabold md:leading-[35px] leading-3' >Desconto</h1>
                         <h1 className='md:text-2xl text-base' >até esse mês</h1>
                     </div>
 

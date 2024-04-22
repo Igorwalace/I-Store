@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { IoPerson } from 'react-icons/io5'
 import { FaCartShopping } from 'react-icons/fa6'
 import { SlMenu } from 'react-icons/sl'
+import { comic_neue } from '@/fonts/fonts'
 
 const Header = () => {
     return (
@@ -13,7 +14,7 @@ const Header = () => {
                     <SlMenu size={20} />
                     </div>
                     <div>
-                        <Link href='/' className='text-2xl' >I-Store</Link>
+                        <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                     </div>
                     <nav className='md:block hidden' >
                         <ul className='flex items-center space-x-4' >
