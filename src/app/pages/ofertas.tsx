@@ -1,6 +1,11 @@
+//React
 import React from 'react'
-import { Products } from './ArrayProducts'
 import Image from 'next/image'
+
+//Pages
+import { Products } from './ArrayProducts'
+
+//React icons
 import { FaRegStar, FaStar } from 'react-icons/fa'
 
 const Ofertas = () => {
@@ -28,8 +33,8 @@ const Ofertas = () => {
                                     <div>
                                         <h1 className='md:text-sm text-xs' >{info.title}</h1>
                                     </div>
-                                    <div className='flex items-center justify-between' >
-                                        <h1 className='md:text-lg text-base font-bold flex' >R$ {info.price}</h1>
+                                    <div className='flex items-center gap-3' >
+                                        <h1 className='md:text-lg text-base font-bold flex flex-nowrap' >R$ {info.price}</h1>
                                         <h1 className="md:text-sm text-xs text-[#1a1a1a] font-bold line-through flex">R$ {info.oldPrice}</h1>
                                     </div>
                                     <div className="flex items-center text-[#8162FF] gap-2">
