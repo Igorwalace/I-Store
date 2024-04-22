@@ -1,6 +1,7 @@
 import React from 'react'
 import { Products } from './ArrayProducts'
 import Image from 'next/image'
+import { FaRegStar, FaStar } from 'react-icons/fa'
 
 const Ofertas = () => {
     return (
@@ -31,10 +32,20 @@ const Ofertas = () => {
                                         <h1 className='md:text-lg text-base font-bold flex' >R$ {info.price}</h1>
                                         <h1 className="md:text-sm text-xs text-[#1a1a1a] font-bold line-through flex">R$ {info.oldPrice}</h1>
                                     </div>
+                                    <div className="flex items-center text-[#8162FF] gap-2">
+                                        <div className='flex items-center' >
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaRegStar />
+                                        </div>
+                                        <span className='text-xs relative top-[2px]' >(25)</span>
+                                    </div>
                                 </div>
                             </div>
                         ))}
-                        {Products.filter(Products => Products.type === "Mouse")
+                    {Products.filter(Products => Products.type === "Mouse")
                         .slice(0, 3)
                         .map((info) => (
                             <div key={info.id} >
@@ -55,10 +66,20 @@ const Ofertas = () => {
                                         <h1 className='md:text-lg text-base font-bold' >R$ {info.price}</h1>
                                         <h1 className="md:text-sm text-xs text-[#1a1a1a] font-bold line-through">R$ {info.oldPrice}</h1>
                                     </div>
+                                    <div className="flex items-center text-[#8162FF] gap-2">
+                                        <div className='flex items-center' >
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaStar />
+                                            <FaRegStar />
+                                        </div>
+                                        <span className='text-xs relative top-[2px]' >(25)</span>
+                                    </div>
                                 </div>
                             </div>
                         ))
-                        }
+                    }
                 </div>
             </main>
         </>
