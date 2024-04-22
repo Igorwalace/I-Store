@@ -23,7 +23,10 @@ const banner = () => {
                     </div>
                     <div>
 
-                        <h1 className='md:text-2xl text-base' >até <span className='md:text-[90px] text-4xl font-extrabold md:leading-[25px]' >55%</span> </h1>
+                        <h1 className='md:text-2xl text-base' >até 
+                        <span className='md:text-[90px] text-4xl font-extrabold md:leading-[25px]' >55%</span> 
+                        <span className='md:text-base text-sm' >de</span>
+                        </h1>
                         <h1 className='md:text-6xl text-2xl font-extrabold md:leading-[35px] leading-3' >Desconto</h1>
                         <h1 className='md:text-2xl text-base' >até esse mês</h1>
                     </div>
