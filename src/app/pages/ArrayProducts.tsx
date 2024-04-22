@@ -33,6 +33,22 @@ export const Products = [
         oldPrice: '529,90'
     },
     {
+        id: 40,
+        img: '/keyBoard_5.png',
+        title: 'TH83',
+        type: 'KeyBoard',
+        price: 'R$ 449,80',
+        oldPrice: '529,90'
+    },
+    {
+        id: 41,
+        img: '/keyBoard_6.png',
+        title: 'TH83',
+        type: 'KeyBoard',
+        price: 'R$ 449,80',
+        oldPrice: '529,90'
+    },
+    {
         id: 5,
         img: '/mouse_1.png',
         title: 'Linux cc',
