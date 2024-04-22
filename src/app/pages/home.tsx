@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import Banner from './banner'
 import Categorias from './categorias'
+import Ofertas from './ofertas'
 
 const Page = () => {
 
@@ -15,6 +16,7 @@ const Page = () => {
                 
             <main className='px-5 md:px-10'>
                 <Categorias />
+                <Ofertas />
             </main>
         </>
     )
