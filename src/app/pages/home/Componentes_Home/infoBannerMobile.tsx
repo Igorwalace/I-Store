@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const InfoBannerMobile = (): any => {
     return (
@@ -13,7 +14,7 @@ const InfoBannerMobile = (): any => {
                     <h1 className='md:text-2xl text-xl font-extrabold md:leading-[10px] leading-3' >Desconto</h1>
                     <h1 className='md:text-base text-sm font-light' >em Teclados</h1>
                 </div>
-                <div>
+                <Link href='/pages/keyBoard'>
                     <Image
                         className='w-[113px] h-[97px] md:w-[140px] md:h-[120px]'
                         src="/teclado_catalogo.png"
@@ -21,7 +22,7 @@ const InfoBannerMobile = (): any => {
                         height={500}
                         alt="Image de um Teclado"
                     />
-                </div>
+                </Link>
             </div>
         </>
     )
