@@ -24,17 +24,17 @@ const PageCatalogo = () => {
               {ProductsCatalogo
               .sort((a, b)=> Math.random() - 0.5)
               .map((info: any) => (
-                <div key={info.id}>
-                  <div className='bg-[#5033C3] flex items-center justify-center md:min-w-[356px] md:min-h-[175px] h-[150px] w-[160px] rounded-lg'>
+                <div key={info.id} className='hover:scale-105 duration-200 cursor-pointer'>
+                  <div className='bg-[#5033C3] flex items-center justify-center md:min-w-[356px] md:min-h-[175px] h-[150px] w-[160px] rounded-t-lg'>
                     <Image
-                      className='w-[100px] h-[53px] md:w-[155px] md:h-[82px]'
+                      className='w-[120px] h-[73px] md:w-[175px] md:h-[89px]'
                       src={info.img}
                       width={500}
                       height={500}
                       alt="cart"
                     />
                   </div>
-                  <h1 className='bg-[#2A2A2A] w-full rounded-md p-2 text-center md:text-lg font-bold' >{info.title}</h1>
+                  <h1 className='bg-[#2A2A2A] w-full rounded-b-md p-2 text-center md:text-lg font-bold' >{info.title}</h1>
                 </div>
               ))}
             </div>
