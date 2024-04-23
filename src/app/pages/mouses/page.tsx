@@ -25,6 +25,8 @@ const Page = () => {
                     </div>
                     <InfoMouses />
                     <InfoMouses />
+                    <div className='md:hidden block' ><InfoMouses /></div>
+                    <div className='md:hidden block' ><InfoMouses /></div>
                 </main>
             </main>
             <div className='mt-10' >

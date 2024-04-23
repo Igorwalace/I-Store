@@ -19,6 +19,8 @@ const Page = () => {
                     </div>
                     <InfokeyBoard />
                     <InfokeyBoard />
+                    <div className='md:hidden block' ><InfokeyBoard /></div>
+                    <div className='md:hidden block' ><InfokeyBoard /></div>
                 </main>
             </main>
             <div className='mt-10' >
