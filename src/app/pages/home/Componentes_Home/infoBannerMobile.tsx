@@ -3,7 +3,7 @@ import Image from 'next/image'
 const InfoBannerMobile = (): any => {
     return (
         <>
-            <div className="flex flex-row-reverse items-center justify-center md:space-x-9 space-x-3">
+            <div className="flex flex-row-reverse items-center justify-center md:gap-12 gap-9">
 
                 <div className='text-white' >
                     <h1 className='md:text-base text-sm font-light' >até
@@ -11,15 +11,15 @@ const InfoBannerMobile = (): any => {
                         <span className='md:text-base text-sm' >de</span>
                     </h1>
                     <h1 className='md:text-2xl text-xl font-extrabold md:leading-[10px] leading-3' >Desconto</h1>
-                    <h1 className='md:text-base text-sm font-light' >em Fones</h1>
+                    <h1 className='md:text-base text-sm font-light' >em Teclados</h1>
                 </div>
                 <div>
                     <Image
                         className='w-[113px] h-[97px] md:w-[140px] md:h-[120px]'
-                        src="/phone_banner.png"
+                        src="/teclado_catalogo.png"
                         width={500}
                         height={500}
-                        alt="cart"
+                        alt="Image de um Teclado"
                     />
                 </div>
             </div>
