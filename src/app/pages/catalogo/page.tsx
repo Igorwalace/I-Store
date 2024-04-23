@@ -18,10 +18,11 @@ const PageCatalogo = () => {
             </h1>
           </div>
 
-          <div className='my-5 mb-[60px] flex' >
+          <div className='my-5 mb-[80px] flex' >
 
             <div className='flex flex-wrap items-center justify-center gap-5'  >
               {ProductsCatalogo
+              .sort((a, b)=> Math.random() - 0.5)
               .map((info: any) => (
                 <div key={info.id}>
                   <div className='bg-[#5033C3] flex items-center justify-center md:min-w-[356px] md:min-h-[175px] h-[150px] w-[160px] rounded-lg' >
