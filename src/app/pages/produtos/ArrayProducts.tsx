@@ -89,7 +89,7 @@ export const Products = [
         oldPrice: '1929,90'
     },
     {
-        id: 10,
+        id: 11,
         img: '/mouse_6.png',
         title: '11 2018',
         type: 'Mouse',

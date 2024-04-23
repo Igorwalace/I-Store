@@ -25,7 +25,7 @@ const PageCatalogo = () => {
               .sort((a, b)=> Math.random() - 0.5)
               .map((info: any) => (
                 <div key={info.id}>
-                  <div className='bg-[#5033C3] flex items-center justify-center md:min-w-[356px] md:min-h-[175px] h-[150px] w-[160px] rounded-lg' >
+                  <div className='bg-[#5033C3] flex items-center justify-center md:min-w-[356px] md:min-h-[175px] h-[150px] w-[160px] rounded-lg'>
                     <Image
                       className='w-[100px] h-[53px] md:w-[155px] md:h-[82px]'
                       src={info.img}
