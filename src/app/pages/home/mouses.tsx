@@ -3,10 +3,10 @@ import React from 'react'
 import Image from 'next/image'
 
 //Pages
-import { Products } from './produtos/ArrayProducts'
 
 //React icons
 import { FaRegStar, FaStar } from 'react-icons/fa'
+import { Products } from '../produtos/ArrayProducts'
 
 const Mouses = () => {
     return (

@@ -20,7 +20,7 @@ const Header = () => {
                         <ul className='flex items-center space-x-4' >
                             <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Início</Link>
                             <li className='text-[#2A2A2A]' >|</li>
-                            <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Catálogo</Link>
+                            <Link href='/pages/catalogo' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Catálogo</Link>
                             <li className='text-[#2A2A2A]' >|</li>
                             <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Ofertas</Link>
                         </ul>

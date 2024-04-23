@@ -1,16 +1,16 @@
 import React from 'react'
 
 //Imports
-import Header from './header/header'
-import Banner from './home/Componentes_Home/banner'
-import Categorias from './home/categorias'
-import Ofertas from './home/ofertas'
-import BannersMain from './home/bannersMain'
-import Teclados from './home/teclados'
-import BannerMobile from './home/Componentes_Home/bannerMobile'
-import BannerFretefree from './home/bannerMainFreteFree'
-import Mouses from './home/mouses'
-import Footer from './footer/footer'
+import Header from './header'
+import Banner from './componentes/banner'
+import Categorias from './categorias'
+import Ofertas from './ofertas'
+import BannersMain from './bannersMain'
+import Teclados from './teclados'
+import BannerMobile from './componentes/bannerMobile'
+import BannerFretefree from './bannerMainFreteFree'
+import Mouses from './mouses'
+import Footer from './footer'
 
 const Page = () => {
 
