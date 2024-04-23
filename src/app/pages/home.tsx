@@ -9,8 +9,8 @@ import Teclados from './home/teclados'
 import BannerMobile from './home/Componentes_Home/bannerMobile'
 import BannerFretefree from './home/bannerMainFreteFree'
 import Mouses from './home/mouses'
-import Footer from './footer/footer'
 import Header from './header/header'
+import Footer from './footer/footer'
 
 const Page = () => {
 
