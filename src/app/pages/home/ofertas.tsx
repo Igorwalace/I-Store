@@ -3,17 +3,18 @@ import React from 'react'
 import Image from 'next/image'
 
 //Pages
+import { Products } from '../produtos/ArrayProducts'
 
 //React icons
 import { FaRegStar, FaStar } from 'react-icons/fa'
-import { Products } from '../produtos/ArrayProducts'
+import { RiStoreLine } from 'react-icons/ri'
 
 const Ofertas = () => {
     return (
         <>
             <main className='my-5' >
                 <div className='mb-2' >
-                    <h1 className='text-[#ffff] md:text-lg text-base font-bold'>OFERTAS</h1>
+                <h1 className='text-[#ffff] md:text-lg text-base font-bold flex items-center gap-3'><RiStoreLine  size={20} />OFERTAS</h1>
                 </div>
                 <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide' >
                     {Products

@@ -1,12 +1,16 @@
+//React
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+
+//Imports Pages
 import InfoBannerMobile from './Componentes_Home/infoBannerMobile'
 
 const BannersMain = () => {
     return (
         <>
             <main className='my-5 flex gap-6 justify-around items-center overflow-x-auto scrollbar-hide' >
-                <div className="md:min-w-[600px] md:min-h-[215px] h-[150px] w-full bg-[#36393C] rounded-xl flex items-center justify-center hover:scale-[1.01] duration-200 cursor-pointer">
+                <Link href='/pages/mouses' className="md:min-w-[600px] md:min-h-[215px] h-[150px] w-full bg-[#36393C] rounded-xl flex items-center justify-center hover:scale-[1.01] duration-200 cursor-pointer">
                     <div className="flex items-center justify-center md:space-x-9 space-x-3">
 
                         <div className='text-white' >
@@ -27,7 +31,7 @@ const BannersMain = () => {
                             />
                         </div>
                     </div>
-                </div>
+                </Link>
                 <div className="md:min-w-[600px] md:min-h-[215px] h-[150px] w-full bg-[#36393C] rounded-xl hidden md:flex items-center justify-center hover:scale-[1.01] duration-200 cursor-pointer">
                     <InfoBannerMobile />
                 </div>

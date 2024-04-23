@@ -7,13 +7,14 @@ import Image from 'next/image'
 //React icons
 import { FaRegStar, FaStar } from 'react-icons/fa'
 import { Products } from '../produtos/ArrayProducts'
+import { CiKeyboard } from 'react-icons/ci'
 
 const Teclados = () => {
     return (
         <>
             <main className='my-5' >
                 <div className='mb-2' >
-                    <h1 className='text-[#ffff] md:text-lg text-base font-bold'>TECLADOS</h1>
+                    <h1 className='text-[#ffff] md:text-lg text-base font-bold flex items-center gap-3'><CiKeyboard size={20} />TECLADOS</h1>
                 </div>
                 <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide' >
                     {Products.filter(Products => Products.type === "KeyBoard")
