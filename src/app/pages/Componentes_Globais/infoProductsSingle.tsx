@@ -1,4 +1,5 @@
 'use client'
+import useAppContext from '@/context/page'
 import Image from 'next/image'
 import React from 'react'
 import { FaRegStar, FaStar } from 'react-icons/fa'
@@ -8,15 +9,19 @@ interface UserProps {
 }
 
 const InfoMouseSingle = (props: UserProps) => {
-
     const info = props.info
 
-    const handleProductsSingle = (title:string) => {
-        alert(`Em breve página single de ${title}`)
+    const { setProductsSingle } = useAppContext()
+
+    const handleProductsSingle = (props: []) => {
+        setProductsSingle(props)
+        console.log(props)
     }
 
     return (
-        <main onClick={() => handleProductsSingle(info.title)} className='hover:scale-95 duration-200 cursor-pointer'>
+        <main
+            onClick={() => handleProductsSingle({...info})}
+            className='hover:scale-95 duration-200 cursor-pointer'>
             <div className='bg-[#1a1a1a] min-w-[156px] min-h-[170px] md:min-w-[180px] md:min-h-[190px] rounded-lg flex items-center justify-center ' >
                 <Image
                     className='w-[150px] h-[135px] md:w-[114px] md:h-[94px]'

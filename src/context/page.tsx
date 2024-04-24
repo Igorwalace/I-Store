@@ -7,9 +7,27 @@ export function AppWrapper({ children }: {
     children: React.ReactNode;
 }) {
     const [menu, setMenu] = useState(false)
+    const [isLogin, setIsLogin] = useState(false)
+    const [infoUser, setInfoUser] = useState([])
+    const [tokenUser, setTokenUser] = useState(null)
+    const [uid, setUid] = useState(null)
+    const [productsSingle, setProductsSingle] = useState([])
 
     return (
-        <AppContext.Provider value={{menu, setMenu}} >
+        <AppContext.Provider value={{
+            menu,
+            setMenu,
+            isLogin,
+            setIsLogin,
+            infoUser,
+            setInfoUser,
+            uid,
+            setUid,
+            tokenUser,
+            setTokenUser,
+            productsSingle,
+            setProductsSingle,
+            }} >
             {children}
         </AppContext.Provider>
     )

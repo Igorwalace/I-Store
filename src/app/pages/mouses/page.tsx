@@ -7,13 +7,13 @@ import Header from '../header/header'
 //React Icons
 import { PiMouseSimpleBold } from 'react-icons/pi'
 import Footer from '../footer/footer'
-import InfoMouses from '../Componentes_Global_Mouse/infoMouses'
+import InfoMousesHome from '../home/Componentes_Home/infoMousesHome'
 
 const Page = () => {
 
     return (
         <>
-            <main className='px-5 md:px-10'>
+            <main className='px-5 md:px-10 pb-10'>
                 <Header />
                 <main className='my-5 text-[#ffff] md:text-left text-center' >
                     <div className='border-[1px] border-[#8162FF] p-2 px-3 rounded-xl inline-block' >
@@ -22,10 +22,10 @@ const Page = () => {
                             Mouses
                         </h1>
                     </div>
-                    <InfoMouses />
+                    <InfoMousesHome />
                 </main>
             </main>
-            <div className='mt-10 absolute bottom-0 left-0 right-0' >
+            <div className='fixed bottom-0 left-0 right-0' >
                 <Footer />
             </div>
         </>

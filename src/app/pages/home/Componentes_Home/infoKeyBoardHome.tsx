@@ -1,24 +1,21 @@
-//React
 import React from 'react'
 
-//Pages
-import { Products } from '../produtos/ArrayProducts'
+//Imports Pages
+import InfoProductsSingle from '../../Componentes_Globais/infoProductsSingle'
+import { Products } from '../../produtos/ArrayProducts'
 
-//React icons
-import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
+//React Icons
 
-
-const InfoMouses = () => {
-
+const InfokeyBoardHome = () => {
     return (
         <>
             <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide my-5' >
                 {Products
-                    .filter(Products => Products.type === "Mouse")
-                    .slice(0, 6)
+                    .filter(Products => Products.type === "KeyBoard")
                     .sort((a, b) => Math.random() - 0.5)
+                    .slice(0, 6)
                     .map((info) => (
-                        <div key={info.id} >
+                        <div key={info.id}>
                             <InfoProductsSingle info={info} />
                         </div>
                     ))}
@@ -27,4 +24,4 @@ const InfoMouses = () => {
     )
 }
 
-export default InfoMouses
+export default InfokeyBoardHome

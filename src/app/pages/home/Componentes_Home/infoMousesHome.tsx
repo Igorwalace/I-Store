@@ -2,17 +2,17 @@
 import React from 'react'
 
 //Pages
-import { Products } from '../produtos/ArrayProducts'
+import { Products } from '../../produtos/ArrayProducts'
+import InfoProductsSingle from '../../Componentes_Globais/infoProductsSingle'
 
 //React icons
-import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
 
 
-const InfoMouses = () => {
+const InfoMousesHome = () => {
 
     return (
         <>
-            <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide my-5' >
+            <div className='flex md:justify-between justify-around items-center flex-wrap md:gap-4 space-y-4 my-5' >
                 {Products
                     .filter(Products => Products.type === "Mouse")
                     .slice(0, 6)
@@ -27,4 +27,4 @@ const InfoMouses = () => {
     )
 }
 
-export default InfoMouses
+export default InfoMousesHome

@@ -11,7 +11,7 @@ import { CiKeyboard } from 'react-icons/ci'
 const Page = () => {
     return (
         <>
-            <main className='px-5 md:px-10'>
+            <main className='px-5 md:px-10 pb-10'>
                 <Header />
                 <main className='my-5 text-[#ffff] md:text-left text-center' >
                     <div className='border-[1px] border-[#8162FF] p-2 px-3 rounded-xl inline-block' >
@@ -20,7 +20,7 @@ const Page = () => {
                     <InfokeyBoard />
                 </main>
             </main>
-            <div className='mt-10 absolute bottom-0 left-0 right-0' >
+            <div className='fixed bottom-0 left-0 right-0' >
                 <Footer />
             </div>
         </>
