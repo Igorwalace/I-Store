@@ -12,7 +12,7 @@ const InfoMouses = () => {
 
     return (
         <>
-            <div className='flex justify-between items-center gap-4 overflow-x-auto my-5' >
+            <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide my-5' >
                 {Products
                     .filter(Products => Products.type === "Mouse")
                     .slice(0, 6)
