@@ -26,8 +26,8 @@ const MenuMobile = () => {
     return (
         <>
             <Sheet>
-                <SheetTrigger>
-                    <div className='border-[1px] border-[#2A2A2A] p-2 rounded' >
+                <SheetTrigger className='outline-none' >
+                    <div className='border-[1px] border-[#2A2A2A] p-2 rounded outline-none' >
                         <SlMenu size={20} />
                     </div>
                 </SheetTrigger>
