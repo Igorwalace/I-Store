@@ -1,42 +1,66 @@
-'use client'
-import useAppContext from '@/context/page'
+
+//React
 import React from 'react'
-import Header from './header'
 import Link from 'next/link'
-import { comic_neue } from '@/fonts/fonts'
+
+//React Icons
 import { SlMenu } from 'react-icons/sl'
 import { IoPerson } from 'react-icons/io5'
-import { FaCartShopping } from 'react-icons/fa6'
+import { MdOutlineHome } from 'react-icons/md'
+import { FiBook } from 'react-icons/fi'
+import { PiLinkSimpleHorizontalLight } from 'react-icons/pi'
+
+//Fonts
+import { comic_neue } from '@/fonts/fonts'
+
+//Shadcn/ui
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
 
 const MenuMobile = () => {
-    const { menu, setMenu } = useAppContext()
     return (
         <>
-            {menu &&
-                <div className='fixed top-0 left-0 right-0 bottom-0 bg-black z-[1000] px-5 md:px-10 text-white' >
-                    <div className="flex justify-between items-center py-6 border-b-[1px] border-[#2A2A2A]">
-
-                        <div className='md:hidden border-[1px] border-[#2A2A2A] p-2 rounded' onClick={() => setMenu(false)}>
-                            <SlMenu size={20} />
-                        </div>
-                        <div>
-                            <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
-                        </div>
-                        
-                        <div className='flex items-center space-x-4' >
-                            <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer' ><IoPerson size={20} /></div>
-                            <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer' ><FaCartShopping size={20} /></div>
-                        </div>
+            <Sheet>
+                <SheetTrigger>
+                    <div className='border-[1px] border-[#2A2A2A] p-2 rounded' >
+                        <SlMenu size={20} />
                     </div>
-                    <nav className='my-5' >
-                            <ul className='flex items-center gap-5 justify-center flex-col' >
-                                <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Início</Link>
-                                <Link href='/pages/catalogo' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Catálogo</Link>
-                                <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Ofertas</Link>
-                            </ul>
-                        </nav>
-                </div>
-            }
+                </SheetTrigger>
+                <SheetContent side='left' className="w-[80%] bg-black text-white border-none" >
+                    <SheetHeader>
+                        <SheetTitle className='text-left text-white ' >
+                            <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
+                        </SheetTitle>
+                        <div className='ml-2' >
+                            <div className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                <span><IoPerson size={20} /></span>
+                                <h1>Login</h1>
+                            </div>
+                            <Link href='/' className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                <span><MdOutlineHome size={20} /></span>
+                                <h1>Home</h1>
+                            </Link>
+                            <Link href='/pages/catalogo' className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                <span><FiBook size={20} /></span>
+                                <h1>Catálogo</h1>
+                            </Link>
+                            {/* <div className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                            <RiStoreLine size={20} />
+                                            <h1>Ofertas</h1>
+                                        </div> */}
+                            <Link href='/pages/todososprodutos' className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                <span><PiLinkSimpleHorizontalLight size={20} /></span>
+                                <h1>Tudo</h1>
+                            </Link>
+                        </div>
+                    </SheetHeader>
+                </SheetContent>
+            </Sheet>
         </>
     )
 }

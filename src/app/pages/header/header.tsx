@@ -1,21 +1,25 @@
-'use client'
+
+//React
 import React from 'react'
 import Link from 'next/link'
+
+//React Icons
 import { IoPerson } from 'react-icons/io5'
 import { FaCartShopping } from 'react-icons/fa6'
-import { SlMenu } from 'react-icons/sl'
+
+//Fonts
 import { comic_neue } from '@/fonts/fonts'
+
+//imports Page
 import MenuMobile from './menuMobile'
-import useAppContext from '@/context/page'
 
 const Header = () => {
-    const { setMenu } = useAppContext()
     return (
         <>
             <main>
                 <div className="text-white flex justify-between items-center py-6 border-b-[1px] border-[#2A2A2A]">
-                    <div className='md:hidden border-[1px] border-[#2A2A2A] p-2 rounded' onClick={()=>setMenu(true)}>
-                        <SlMenu size={20} />
+                    <div className="md:hidden">
+                        <MenuMobile />
                     </div>
                     <div>
                         <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
@@ -35,7 +39,6 @@ const Header = () => {
                     </div>
                 </div>
             </main>
-            <MenuMobile />
         </>
     )
 }
