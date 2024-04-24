@@ -15,7 +15,7 @@ const PageCatalogo = () => {
     <>
       <main className='px-5 md:px-10' >
         <Header />
-        <div className='my-5 text-[#ffff]' >
+        <div className='my-5 text-[#ffff] md:text-left text-center' >
           <div className='border-[1px] border-[#8162FF] p-2 px-3 rounded-xl inline-block' >
             <h1 className='flex items-center gap-3' >
               <span><GrCatalogOption size={20} /></span>

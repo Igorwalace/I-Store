@@ -12,7 +12,7 @@ const InfoMouseSingle = (props: UserProps) => {
     const info = props.info
 
     const handleProductsSingle = (title:string) => {
-        alert(title)
+        alert(`Em breve página single de ${title}`)
     }
 
     return (
