@@ -18,12 +18,9 @@ const Page = () => {
                         <h1 className='text-[#ffff] md:text-lg text-base font-bold flex items-center gap-3'><CiKeyboard size={20} />TECLADOS</h1>
                     </div>
                     <InfokeyBoard />
-                    <InfokeyBoard />
-                    <div className='md:hidden block' ><InfokeyBoard /></div>
-                    <div className='md:hidden block' ><InfokeyBoard /></div>
                 </main>
             </main>
-            <div className='mt-10' >
+            <div className='mt-10 absolute bottom-0 left-0 right-0' >
                 <Footer />
             </div>
         </>

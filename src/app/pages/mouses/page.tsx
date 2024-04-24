@@ -23,12 +23,9 @@ const Page = () => {
                         </h1>
                     </div>
                     <InfoMouses />
-                    <InfoMouses />
-                    <div className='md:hidden block' ><InfoMouses /></div>
-                    <div className='md:hidden block' ><InfoMouses /></div>
                 </main>
             </main>
-            <div className='mt-10' >
+            <div className='mt-10 absolute bottom-0 left-0 right-0' >
                 <Footer />
             </div>
         </>

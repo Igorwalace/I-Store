@@ -9,7 +9,7 @@ import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
 const InfokeyBoard = () => {
     return (
         <>
-            <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide my-5' >
+            <div className='flex md:justify-between justify-around items-center flex-wrap md:gap-4 space-y-4 my-5' >
                 {Products
                     .filter(Products => Products.type === "KeyBoard")
                     .sort((a, b) => Math.random() - 0.5)
