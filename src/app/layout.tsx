@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href='/icon.png' />
       </head>
-      <body className={`${poppins.className} bg-[#0B0B0B]`}>
+      <body className={`${poppins.className} bg-[#0B0B0B] scrollbar-hide`}>
         <AppWrapper>
           {children}
         </AppWrapper>

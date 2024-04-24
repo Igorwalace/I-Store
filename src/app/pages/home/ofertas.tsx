@@ -15,7 +15,7 @@ const Ofertas = () => {
                 <div className='mb-2' >
                     <h1 className='text-[#ffff] md:text-lg text-base font-bold flex items-center gap-3'><RiStoreLine size={20} />OFERTAS</h1>
                 </div>
-                <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide' >
+                <div className='flex justify-between items-center gap-4 overflow-x-auto' >
                     {Products
                         .sort((a, b) => Math.random() - 0.5)
                         .slice(0, 6)
