@@ -53,7 +53,7 @@ const MenuMobile = () => {
                                             <RiStoreLine size={20} />
                                             <h1>Ofertas</h1>
                                         </div> */}
-                            <Link href='/pages/todososprodutos' className='text-left m-1 pt-4 flex gap-2 items-center'>
+                            <Link href='/pages/TodosOsProdutos' className='text-left m-1 pt-4 flex gap-2 items-center'>
                                 <span><PiLinkSimpleHorizontalLight size={20} /></span>
                                 <h1>Tudo</h1>
                             </Link>
