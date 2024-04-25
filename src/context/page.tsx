@@ -1,5 +1,5 @@
 'use client'
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 
 export const AppContext = createContext<any>(undefined);
 
@@ -11,7 +11,14 @@ export function AppWrapper({ children }: {
     const [infoUser, setInfoUser] = useState([])
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
-    const [productsSingle, setProductsSingle] = useState([])
+
+    const [productsSingle, setProductsSingle] = useState(
+        JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
+    )
+
+    useEffect(()=>{
+        localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
+    },[productsSingle])
 
     return (
         <AppContext.Provider value={{
