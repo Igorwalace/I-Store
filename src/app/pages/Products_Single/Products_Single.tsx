@@ -1,6 +1,6 @@
 'use client'
 import useAppContext from '@/context/page'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Img from './Componentes_Products_Single/img'
 import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
 import { CiDeliveryTruck } from 'react-icons/ci'
@@ -12,6 +12,10 @@ const Products_Single = () => {
 
   const { productsSingle } = useAppContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.Img)
+
+  useEffect(()=>{
+    setCurrentImg(productsSingle.imagens_lados[0])
+  },[])
   
   const handleAddCar = () => {
     alert(`Em breve poderá adicionar ao carrinho: ${productsSingle.title}`)
