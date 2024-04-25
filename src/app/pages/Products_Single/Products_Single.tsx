@@ -12,6 +12,10 @@ const Products_Single = () => {
 
   const { productsSingle } = useAppContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.imagens_lados[0])
+  
+  if (currentImg === null || currentImg === undefined) {
+    return <div>Imagem não disponível</div>;
+  } 
 
   const handleAddCar = () => {
     alert(`Em breve poderá adicionar ao carrinho: ${productsSingle.title}`)
