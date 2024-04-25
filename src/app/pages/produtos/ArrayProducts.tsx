@@ -194,6 +194,6 @@ export const Products: Product[] = [
         oldPrice: '899,90',
         quantidade: 2,
         newOrOld: 'novo',
-        imagens_lados: ['/keyBoard_1.png', '/keyBoard_1_1.png', '/keyBoard_1_2.png', '/keyBoard_1_3.png']
+        imagens_lados: ['/phone_1.png', '/phone_1_1.png', '/phone_1_2.png', '/phone_1_3.png']
     }
 ]

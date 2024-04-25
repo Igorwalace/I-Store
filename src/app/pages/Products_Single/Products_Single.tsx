@@ -10,7 +10,7 @@ import Imgs_lados from './Componentes_Products_Single/imgs_lados'
 
 const Products_Single = () => {
 
-  const { setProductsSingle, productsSingle } = useAppContext()
+  const { productsSingle } = useAppContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.imagens_lados[0])
 
   const handleAddCar = () => {
