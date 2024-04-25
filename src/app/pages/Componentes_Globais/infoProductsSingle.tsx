@@ -16,7 +16,6 @@ const InfoMouseSingle = (props: UserProps) => {
 
     const handleProductsSingle = (props: []) => {
         setProductsSingle(props)
-        console.log(productsSingle)
     }
 
     return (
