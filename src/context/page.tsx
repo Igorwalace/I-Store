@@ -12,9 +12,14 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
-    const [productsSingle, setProductsSingle] = useState(
-        JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
-    )
+    const [productsSingle, setProductsSingle] = useState([])
+
+    useEffect(()=>{
+        const productOld = JSON.parse(localStorage.getItem('ProductsSingle'))
+        if(productOld){
+            setProductsSingle(productOld)
+        }
+    },[])
 
     useEffect(()=>{
         localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
