@@ -10,7 +10,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/teclado_catalogo.png',
         title_catalogo: 'Teclados',
-        link_catalogo: '/pages/keyBoard'
+        link_catalogo: '/pages/keyBoard',
+        quantidade: 22,
+        newOrOld: 'novo'
     },
     {
         id: 2,
@@ -23,7 +25,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/mouse_catalogo_1.png',
         title_catalogo: 'Mouses',
-        link_catalogo: '/pages/mouses'
+        link_catalogo: '/pages/mouses',
+        quantidade: 32,
+        newOrOld: 'Usado'
     },
     {
         id: 3,
@@ -36,7 +40,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/monitor_catalogo_1.png',
         title_catalogo: 'Monitores',
-        link_catalogo: '/pages/monitores'
+        link_catalogo: '/pages/monitores',
+        quantidade: 8,
+        newOrOld: 'novo'
     },
     {
         id: 4,
@@ -49,7 +55,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/caixa_catalogo_1.png',
         title_catalogo: 'Spkears',
-        link_catalogo: '/pages/spkears'
+        link_catalogo: '/pages/spkears',
+        quantidade: 45,
+        newOrOld: 'novo'
     },
     {
         id: 5,
@@ -62,7 +70,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/mouse_pad_catalogo_1.png',
         title_catalogo: 'Mouse pads',
-        link_catalogo: '/pages/mousePads'
+        link_catalogo: '/pages/mousePads',
+        quantidade: 63,
+        newOrOld: 'novo'
     },
     {
         id: 6,
@@ -75,7 +85,9 @@ export const Products = [
         type_catalogo: true,
         img_catalogo: '/phone_banner.png',
         title_catalogo: 'Fones',
-        link_catalogo: '/pages/fones'
+        link_catalogo: '/pages/fones',
+        quantidade: 54,
+        newOrOld: 'Usado'
     },
     {
         id: 7,
@@ -84,7 +96,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 279.90',
-        oldPrice: '829,90'
+        oldPrice: '829,90',
+        quantidade: 97,
+        newOrOld: 'Usado'
     },
     {
         id: 8,
@@ -93,7 +107,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 229,90',
-        oldPrice: '329,90'
+        oldPrice: '329,90',
+        quantidade: 41,
+        newOrOld: 'Usado'
     },
     {
         id: 9,
@@ -102,7 +118,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 180,71,',
-        oldPrice: '289,90'
+        oldPrice: '289,90',
+        quantidade: 62,
+        newOrOld: 'novo'
     },
     {
         id: 10,
@@ -111,7 +129,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 890,12',
-        oldPrice: '1029,90'
+        oldPrice: '1029,90',
+        quantidade: 26,
+        newOrOld: 'novo'
     },
     {
         id: 11,
@@ -120,7 +140,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 1500,12',
-        oldPrice: '1929,90'
+        oldPrice: '1929,90',
+        quantidade: 33,
+        newOrOld: 'novo'
     },
     {
         id: 12,
@@ -129,7 +151,9 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 'R$ 1200,12',
-        oldPrice: '1329,90'
+        oldPrice: '1329,90',
+        quantidade: 810,
+        newOrOld: 'novo'
     },
     {
         id: 13,
@@ -138,6 +162,8 @@ export const Products = [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Phone',
         price: 'R$ 699,99',
-        oldPrice: '899,90'
+        oldPrice: '899,90',
+        quantidade: 2,
+        newOrOld: 'novo'
     }
 ]
