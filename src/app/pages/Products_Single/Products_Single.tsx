@@ -15,7 +15,7 @@ const Products_Single = () => {
 
   useEffect(()=>{
     setCurrentImg(productsSingle.imagens_lados[0])
-  },[])
+  },[productsSingle])
   
   const handleAddCar = () => {
     alert(`Em breve poderá adicionar ao carrinho: ${productsSingle.title}`)
