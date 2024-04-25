@@ -12,7 +12,13 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
-    const [productsSingle, setProductsSingle] = useState([])
+    const [productsSingle, setProductsSingle] = useState(
+        JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
+    );
+
+    useEffect(()=>{
+        localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
+    },[productsSingle])
 
     return (
         <AppContext.Provider value={{
