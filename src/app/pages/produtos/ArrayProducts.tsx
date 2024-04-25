@@ -8,7 +8,7 @@ type Product = {
     oldPrice: string; // Assuming oldPrice is displayed as a string
     quantidade: number; // Assuming quantidade represents quantity
     newOrOld: string; // Assuming "novo" represents "New" or modify type
-    imagens_lados?: string[]; // Optional array of image paths for sides
+    imagens_lados: string[]; // Optional array of image paths for sides
     type_catalogo?: boolean; // Optional flag for catalog inclusion
     img_catalogo?: string; // Optional catalog image path
     title_catalogo?: string; // Optional catalog title
@@ -193,6 +193,7 @@ export const Products: Product[] = [
         price: 'R$ 699,99',
         oldPrice: '899,90',
         quantidade: 2,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/keyBoard_1.png', '/keyBoard_1_1.png', '/keyBoard_1_2.png', '/keyBoard_1_3.png']
     }
 ]
