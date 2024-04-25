@@ -12,18 +12,13 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
-    const [productsSingle, setProductsSingle] = useState([])
+    const [productsSingle, setProductsSingle] = useState(
+        JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
+    )
 
-    useEffect(()=>{
-        const productOld = JSON.parse(localStorage.getItem('ProductsSingle'))
-        if(productOld){
-            setProductsSingle(productOld)
-        }
-    },[])
-
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
-    },[productsSingle])
+    }, [productsSingle])
 
     return (
         <AppContext.Provider value={{
@@ -39,7 +34,7 @@ export function AppWrapper({ children }: {
             setTokenUser,
             productsSingle,
             setProductsSingle,
-            }} >
+        }} >
             {children}
         </AppContext.Provider>
     )
