@@ -1,4 +1,21 @@
-export const Products = [
+type Product = {
+    id: number;
+    img: string;
+    title: string;
+    description: string;
+    type: string; // Assuming product type can be anything (modify if needed)
+    price: string; // Assuming price is displayed as a string
+    oldPrice: string; // Assuming oldPrice is displayed as a string
+    quantidade: number; // Assuming quantidade represents quantity
+    newOrOld: string; // Assuming "novo" represents "New" or modify type
+    imagens_lados?: string[]; // Optional array of image paths for sides
+    type_catalogo?: boolean; // Optional flag for catalog inclusion
+    img_catalogo?: string; // Optional catalog image path
+    title_catalogo?: string; // Optional catalog title
+    link_catalogo?: string; // Optional catalog link
+};
+
+export const Products: Product[] = [
     {
         id: 1,
         img: '/keyBoard_1.png',
@@ -12,7 +29,8 @@ export const Products = [
         title_catalogo: 'Teclados',
         link_catalogo: '/pages/keyBoard',
         quantidade: 22,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/keyBoard_1.png', '/keyBoard_1_1.png', '/keyBoard_1_2.png', '/keyBoard_1_3.png']
     },
     {
         id: 2,
@@ -27,7 +45,8 @@ export const Products = [
         title_catalogo: 'Mouses',
         link_catalogo: '/pages/mouses',
         quantidade: 32,
-        newOrOld: 'Usado'
+        newOrOld: 'Usado',
+        imagens_lados: ['/keyBoard_2.png', '/keyBoard_2_1.png', '/keyBoard_2_2.png', '/keyBoard_2_3.png']
     },
     {
         id: 3,
@@ -42,7 +61,8 @@ export const Products = [
         title_catalogo: 'Monitores',
         link_catalogo: '/pages/monitores',
         quantidade: 8,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/keyBoard_3.png', '/keyBoard_3_1.png', '/keyBoard_3_2.png', '/keyBoard_3_3.png']
     },
     {
         id: 4,
@@ -57,7 +77,8 @@ export const Products = [
         title_catalogo: 'Spkears',
         link_catalogo: '/pages/spkears',
         quantidade: 45,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/keyBoard_4.png', '/keyBoard_4_1.png', '/keyBoard_4_2.png', '/keyBoard_4_3.png']
     },
     {
         id: 5,
@@ -72,7 +93,8 @@ export const Products = [
         title_catalogo: 'Mouse pads',
         link_catalogo: '/pages/mousePads',
         quantidade: 63,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/keyBoard_5.png', '/keyBoard_5_1.png', '/keyBoard_5_2.png', '/keyBoard_5_3.png']
     },
     {
         id: 6,
@@ -87,7 +109,8 @@ export const Products = [
         title_catalogo: 'Fones',
         link_catalogo: '/pages/fones',
         quantidade: 54,
-        newOrOld: 'Usado'
+        newOrOld: 'Usado',
+        imagens_lados: ['/keyBoard_6.png', '/keyBoard_6_1.png', '/keyBoard_6_2.png', '/keyBoard_6_3.png']
     },
     {
         id: 7,
@@ -98,7 +121,8 @@ export const Products = [
         price: 'R$ 279.90',
         oldPrice: '829,90',
         quantidade: 97,
-        newOrOld: 'Usado'
+        newOrOld: 'Novo',
+        imagens_lados: ['/mouse_1.png', '/mouse_1_1.png', '/mouse_1_2.png', '/mouse_1_3.png']
     },
     {
         id: 8,
@@ -109,7 +133,8 @@ export const Products = [
         price: 'R$ 229,90',
         oldPrice: '329,90',
         quantidade: 41,
-        newOrOld: 'Usado'
+        newOrOld: 'Usado',
+        imagens_lados: ['/mouse_2.png', '/mouse_2_1.png', '/mouse_2_2.png', '/mouse_2_3.png']
     },
     {
         id: 9,
@@ -120,7 +145,8 @@ export const Products = [
         price: 'R$ 180,71,',
         oldPrice: '289,90',
         quantidade: 62,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/mouse_3.png', '/mouse_3_1.png', '/mouse_3_2.png', '/mouse_3_3.png']
     },
     {
         id: 10,
@@ -131,7 +157,8 @@ export const Products = [
         price: 'R$ 890,12',
         oldPrice: '1029,90',
         quantidade: 26,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/mouse_4.png', '/mouse_4_1.png', '/mouse_4_2.png', '/mouse_4_3.png']
     },
     {
         id: 11,
@@ -142,7 +169,8 @@ export const Products = [
         price: 'R$ 1500,12',
         oldPrice: '1929,90',
         quantidade: 33,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/mouse_5.png', '/mouse_5_1.png', '/mouse_5_2.png', '/mouse_5_3.png']
     },
     {
         id: 12,
@@ -153,7 +181,8 @@ export const Products = [
         price: 'R$ 1200,12',
         oldPrice: '1329,90',
         quantidade: 810,
-        newOrOld: 'novo'
+        newOrOld: 'novo',
+        imagens_lados: ['/mouse_6.png', '/mouse_6_1.png', '/mouse_6_2.png', '/mouse_6_3.png']
     },
     {
         id: 13,

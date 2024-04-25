@@ -1,19 +1,20 @@
 'use client'
 import useAppContext from '@/context/page'
-import React from 'react'
+import React, { useState } from 'react'
 import Img from './Componentes_Products_Single/img'
 import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
 import { CiDeliveryTruck } from 'react-icons/ci'
 import { Products } from '../produtos/ArrayProducts'
 import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
-import Footer from '../footer/footer'
+import Imgs_lados from './Componentes_Products_Single/imgs_lados'
 
 const Products_Single = () => {
 
   const { setProductsSingle, productsSingle } = useAppContext()
+  const [currentImg, setCurrentImg] = useState(productsSingle.imagens_lados[0])
 
   const handleAddCar = () => {
-    alert('Em breve')
+    alert(`Em breve poderá adicionar ao carrinho: ${productsSingle.title}`)
   }
 
   return (
@@ -21,14 +22,18 @@ const Products_Single = () => {
       <main>
 
         <div className='md:flex gap-3 justify-between items-center' >
-          <Img productsSingle={productsSingle} />
+          <Img setCurrentImg={setCurrentImg} currentImg={currentImg} />
           <div className="md:w-[35%] md:h-[618px] md:bg-[#1A1A1A] my-5 rounded-xl md:p-10 py-5">
+
+            <div className='md:hidden flex justify-start gap-4 mb-9' >
+              <Imgs_lados currentImg={currentImg} setCurrentImg={setCurrentImg} />
+            </div>
 
             <div className='flex flex-col justify-center items-start gap-2' >
               <div className='text-[#A1A1A1] flex items-center gap-2 md:text-sm' >
                 <h1 className='capitalize' >{productsSingle.newOrOld}</h1>
                 <h1>|</h1>
-                <h1>{productsSingle.quantidade} Vendidos</h1>
+                <h1>{productsSingle.quantidade} Disponivel</h1>
               </div>
 
               <div className='text-[#ffff] flex items-center gap-2 md:text-[22px] text-lg' >
@@ -69,8 +74,8 @@ const Products_Single = () => {
               <h1 className='text-[#A1A1A1] text-xs md:text-sm'>{productsSingle.description}</h1>
             </div>
 
-            <div className='text-center text-sm md:text-base font-extrabold mt-5 p-2 bg-[#5033C3] rounded-xl text-[#ffff] hover:scale-[1.02] duration-200' >
-              <button onClick={handleAddCar} >ADICIONAR AO CARRINHO</button>
+            <div className='text-center text-sm md:text-base font-extrabold mt-5 p-2 bg-[#5033C3] rounded-xl text-[#ffff] hover:scale-[1.02] duration-200 cursor-pointer' onClick={handleAddCar}>
+              <button>ADICIONAR AO CARRINHO</button>
             </div>
 
             <div className='my-5 mt-3 flex items-center justify-between text-[#ffff] bg-[#2A2A2A] px-2 py-[11px] rounded-xl' >
