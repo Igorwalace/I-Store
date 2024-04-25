@@ -13,7 +13,7 @@ const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
 
     return (
         <>
-            {productsSingle.imagens_lados ? productsSingle.imagens_lados.map((info: string) => (
+            {productsSingle.imagens_lados.map((info: string) => (
                 <div
                     key={info}
                     onClick={()=> handleChandeImgs(info)}
@@ -29,7 +29,7 @@ const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
                         alt="Image Do Produto"
                     />
                 </div>
-            )) : ''
+            ))
             }
         </>
     )
