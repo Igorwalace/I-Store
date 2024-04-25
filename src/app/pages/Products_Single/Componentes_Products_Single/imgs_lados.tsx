@@ -6,6 +6,7 @@ import useAppContext from '@/context/page'
 const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
 
     const { productsSingle } = useAppContext()
+    const imgs = productsSingle.imagens_lados
 
     const handleChandeImgs = (newImg:string) => {
         setCurrentImg(newImg)
@@ -13,7 +14,7 @@ const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
 
     return (
         <>
-            {productsSingle.imagens_lados.map((info: string) => (
+            {imgs.map((info: string) => (
                 <div
                     key={info}
                     onClick={()=> handleChandeImgs(info)}
