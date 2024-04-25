@@ -1,21 +1,5 @@
-type Product = {
-    id: number;
-    img: string;
-    title: string;
-    description: string;
-    type: string; // Assuming product type can be anything (modify if needed)
-    price: string; // Assuming price is displayed as a string
-    oldPrice: string; // Assuming oldPrice is displayed as a string
-    quantidade: number; // Assuming quantidade represents quantity
-    newOrOld: string; // Assuming "novo" represents "New" or modify type
-    imagens_lados: string[]; // Optional array of image paths for sides
-    type_catalogo?: boolean; // Optional flag for catalog inclusion
-    img_catalogo?: string; // Optional catalog image path
-    title_catalogo?: string; // Optional catalog title
-    link_catalogo?: string; // Optional catalog link
-};
 
-export const Products: Product[] = [
+export const Products= [
     {
         id: 1,
         img: '/keyBoard_1.png',
