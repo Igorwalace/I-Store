@@ -12,6 +12,8 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
+    const [carrinho, setCarrinho] = useState([])
+
     const [productsSingle, setProductsSingle] = useState(
         typeof window !== 'undefined'
             ? JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
@@ -20,7 +22,8 @@ export function AppWrapper({ children }: {
 
     useEffect(() => {
         localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
-    }, [productsSingle])
+        localStorage.setItem('Carrinho', JSON.stringify(carrinho))
+    }, [productsSingle, carrinho])
 
     return (
         <AppContext.Provider value={{
@@ -36,6 +39,8 @@ export function AppWrapper({ children }: {
             setTokenUser,
             productsSingle,
             setProductsSingle,
+            carrinho,
+            setCarrinho,
         }} >
             {children}
         </AppContext.Provider>

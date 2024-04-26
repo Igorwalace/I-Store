@@ -126,7 +126,7 @@ export const Products= [
         title: 'Mouse Pro Max',
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
-        price: 'R$ 180,71,',
+        price: 'R$ 180,71',
         oldPrice: '289,90',
         quantidade: 62,
         newOrOld: 'novo',

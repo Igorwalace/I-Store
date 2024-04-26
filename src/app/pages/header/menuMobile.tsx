@@ -25,6 +25,7 @@ import {
 const MenuMobile = () => {
     return (
         <>
+            <main className="md:hidden">
             <Sheet>
                 <SheetTrigger className='outline-none' >
                     <div className='border-[1px] border-[#2A2A2A] p-2 rounded outline-none' >
@@ -61,6 +62,7 @@ const MenuMobile = () => {
                     </SheetHeader>
                 </SheetContent>
             </Sheet>
+            </main>
         </>
     )
 }

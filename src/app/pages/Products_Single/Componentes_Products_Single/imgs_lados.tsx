@@ -1,12 +1,10 @@
 'use client'
-import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import useAppContext from '@/context/page'
 
 const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
 
-    const { setProductsSingle, productsSingle } = useAppContext()
-
+    const { productsSingle } = useAppContext()
 
     const handleChandeImgs = (newImg: string) => {
         setCurrentImg(newImg)
@@ -14,7 +12,7 @@ const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
 
     return (
         <>
-            {productsSingle.imagens_lados ? productsSingle.imagens_lados.map((info: string) => (
+            {productsSingle.imagens_lados && productsSingle.imagens_lados.map((info: string) => (
                 <div
                     key={info}
                     onClick={() => handleChandeImgs(info)}
@@ -30,7 +28,7 @@ const Imgs_lados = ({ setCurrentImg, currentImg }: any) => {
                         alt="Image Do Produto"
                     />
                 </div>
-            )) : ''
+            ))
             }
         </>
     )

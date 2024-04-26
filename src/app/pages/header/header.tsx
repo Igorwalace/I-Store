@@ -12,15 +12,14 @@ import { comic_neue } from '@/fonts/fonts'
 
 //imports Page
 import MenuMobile from './menuMobile'
+import Carrinho from './carrinho'
 
 const Header = () => {
     return (
         <>
             <main>
                 <div className="text-white flex justify-between items-center py-6 border-b-[1px] border-[#2A2A2A]">
-                    <div className="md:hidden">
                         <MenuMobile />
-                    </div>
                     <div>
                         <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                     </div>
@@ -35,7 +34,8 @@ const Header = () => {
                     </nav>
                     <div className='flex items-center space-x-4' >
                         <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hidden md:block hover:scale-110 hover:text-[#c1c1c1] duration-200' ><IoPerson size={20} /></div>
-                        <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200' ><FaCartShopping size={20} /></div>
+                            {/* <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200' ><FaCartShopping size={20} /></div> */}
+                            <Carrinho />
                     </div>
                 </div>
             </main>
