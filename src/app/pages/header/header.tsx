@@ -32,8 +32,8 @@ const Header = () => {
                             <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Ofertas</Link>
                         </ul>
                     </nav>
-                    <div className='flex items-center space-x-4' >
-                        <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hidden md:block hover:scale-110 hover:text-[#c1c1c1] duration-200' ><IoPerson size={20} /></div>
+                    <div className='flex items-center space-x-4 ' >
+                        <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hidden md:block' ><IoPerson size={20} /></div>
                             {/* <div className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200' ><FaCartShopping size={20} /></div> */}
                             <Carrinho />
                     </div>

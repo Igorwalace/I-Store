@@ -83,7 +83,7 @@ export const Products= [
     {
         id: 6,
         img: '/keyBoard_6.png',
-        title: 'TH83',
+        title: 'TH83 Pro Ultra',
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'KeyBoard',
         price: 'R$ 449,80',

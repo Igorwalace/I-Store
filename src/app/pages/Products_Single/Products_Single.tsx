@@ -12,28 +12,46 @@ const Products_Single = () => {
 
   const { productsSingle, setCarrinho, carrinho } = useAppContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.Img)
+  const [quant, setQuant] = useState(1)
 
   useEffect(() => {
     setCurrentImg(productsSingle.imagens_lados[0])
+    setQuant(1)
   }, [productsSingle])
 
   const handleAddCar = (img: string, title: string, price: string, id: number) => {
+    const ItemCarrinho = carrinho.find((carrinho:any) => carrinho.id === id)
+    if(ItemCarrinho){
+      return
+    }
     const newCarrinho = [
         ...carrinho,
         {
           img: img,
           title: title,
           price: price,
-          id: id
+          id: id,
+          quantidade: quant,
         },
       ];
     setCarrinho(newCarrinho)
+  }
+  const handleAddMoreQuant = (value:string) => {
+    if(value == 'More'){
+      setQuant(quant + 1)
+    } else {
+      if(quant === 1){
+        return
+      }
+      setQuant(quant - 1)
+
+    }
   }
 
 return (
   <>
     <main>
-      <div className='md:flex gap-3 justify-between items-center' >
+      <div className='md:flex gap-3 justify-between items-start' >
         <Img setCurrentImg={setCurrentImg} currentImg={currentImg} />
         <div className="md:w-[35%] md:h-[618px] md:bg-[#1A1A1A] my-5 rounded-xl md:p-10 py-5">
 
@@ -75,9 +93,9 @@ return (
             </div>
 
             <div className='flex items-center gap-2' >
-              <button className='border-2 border-[#2A2A2A] text-white p-2 rounded-md hover:scale-105 duration-200' ><h1><FaArrowLeft /></h1></button>
-              <div className='text-white p-2 text-sm md:text-base' ><h1>1</h1></div>
-              <button className='border-2 border-[#2A2A2A] text-white p-2 rounded-md hover:scale-105 duration-200' ><h1><FaArrowRight /></h1></button>
+              <button className='border-2 border-[#2A2A2A] text-white p-2 rounded-md hover:scale-105 duration-200' onClick={()=>handleAddMoreQuant('AnyLess')}><h1><FaArrowLeft /></h1></button>
+              <div className='text-white p-2 text-sm md:text-base' ><h1>{quant}</h1></div>
+              <button className='border-2 border-[#2A2A2A] text-white p-2 rounded-md hover:scale-105 duration-200' onClick={()=>handleAddMoreQuant('More')}><h1><FaArrowRight /></h1></button>
             </div>
           </div>
 
@@ -110,11 +128,11 @@ return (
         <div>
           <h1 className="md:text-lg text-base uppercase font-bold pl-1">Produtos Recomendados</h1>
         </div>
-        <div className='flex justify-between items-center gap-4 overflow-x-auto scrollbar-hide my-3' >
+        <div className='flex justify-start items-center gap-4 overflow-x-auto scrollbar-hide my-3' >
           {Products
             .filter(Products => Products.type == `${productsSingle.type}`)
-            .sort((a, b) => Math.random() - 0.5)
-            .slice(0, 6)
+            .filter(Products => Products.id != productsSingle.id)
+            .slice(0, 9)
             .map((info) => (
               <div key={info.id}>
                 <InfoProductsSingle info={info} />

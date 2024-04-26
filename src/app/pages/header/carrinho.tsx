@@ -29,7 +29,7 @@ const Carrinho = () => {
         <>
             <Sheet>
                 <SheetTrigger className='outline-none' >
-                    <div className='border-[1px] border-[#2A2A2A] p-2 rounded outline-none' >
+                    <div className='border-[1px] border-[#2A2A2A] p-2 rounded outline-none hover:scale-110 hover:text-[#c1c1c1] duration-200' >
                         <FaCartShopping size={20} />
                     </div>
                 </SheetTrigger>
