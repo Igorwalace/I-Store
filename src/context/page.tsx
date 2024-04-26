@@ -12,7 +12,11 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
-    const [carrinho, setCarrinho] = useState([])
+    const [carrinho, setCarrinho] = useState(
+        typeof window !== 'undefined'
+            ? JSON.parse(localStorage.getItem('Carrinho') || '[]')
+            : [] // Empty array for Node.js builds
+    )
 
     const [productsSingle, setProductsSingle] = useState(
         typeof window !== 'undefined'
