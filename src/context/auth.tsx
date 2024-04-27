@@ -12,39 +12,24 @@ export function AppAuth({ children }: {
 }) {
     const provider = new GoogleAuthProvider();
 
-    const [photoUrl, setPhotoUrl] = useState<string | null>(
-        typeof window !== 'undefined'
-            && JSON.parse(localStorage.getItem('PhotoUrl') || '[]')
-    )
-
-    const [infoUser, setInfoUser] = useState<any>(
-        typeof window !== 'undefined'
-            && JSON.parse(localStorage.getItem('InfoUser') || '[]')
-    )
-
-    const [tokenUser, setTokenUser] = useState<string | number>(
-        typeof window !== 'undefined'
-            && JSON.parse(localStorage.getItem('InfoUser') || '[]')
-    )
-
-    const [uid, setUid] = useState<string | number>(
-        typeof window !== 'undefined'
-            && JSON.parse(localStorage.getItem('Uid') || '[]')
-    )
-    
     useEffect(() => {
-        localStorage.setItem('Token', JSON.stringify(tokenUser)),
-        localStorage.setItem('InfoUser', JSON.stringify(infoUser)),
-        localStorage.setItem('Uid', JSON.stringify(uid))
-        localStorage.setItem('PhotoUrl', JSON.stringify(photoUrl))
-    }, [tokenUser, infoUser, uid, photoUrl])
+
+    }, [])
+
+    const [photoUrl, setPhotoUrl] = useState<string | null>()
+
+    const [infoUser, setInfoUser] = useState<any>()
+
+    const [tokenUser, setTokenUser] = useState<string | number>()
+
+    const [uid, setUid] = useState<string | number>()
 
 
     const handleLogin = async () => {
         await signInWithPopup(auth, provider)
             .then((result) => {
-                const credential:any = GoogleAuthProvider.credentialFromResult(result);
-                const token:any = credential.accessToken;
+                const credential: any = GoogleAuthProvider.credentialFromResult(result);
+                const token: any = credential.accessToken;
                 const user = result.user;
                 setInfoUser(user)
                 setUid(user.uid)
