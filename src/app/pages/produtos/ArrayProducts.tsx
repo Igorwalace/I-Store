@@ -127,7 +127,7 @@ export const Products= [
         description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
         type: 'Mouse',
         price: 699.99.toFixed(2),
-        oldPrice: 72.49.toFixed(2),
+        oldPrice: 722.49.toFixed(2),
         quantidade: 12,
         newOrOld: 'novo',
         imagens_lados: ['/mouse_3.png', '/mouse_3_1.png', '/mouse_3_2.png', '/mouse_3_3.png']
