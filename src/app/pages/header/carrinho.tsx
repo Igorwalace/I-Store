@@ -1,14 +1,9 @@
-
 //React
 import React from 'react'
 import Link from 'next/link'
 
 //React Icons
-import { SlMenu } from 'react-icons/sl'
-import { IoPerson } from 'react-icons/io5'
-import { MdOutlineHome } from 'react-icons/md'
-import { FiBook } from 'react-icons/fi'
-import { PiLinkSimpleHorizontalLight } from 'react-icons/pi'
+import { FaCartShopping } from 'react-icons/fa6'
 
 //Fonts
 import { comic_neue } from '@/fonts/fonts'
@@ -21,10 +16,13 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { FaCartShopping } from 'react-icons/fa6'
-import CarrinhoClient from './CarrinhoClient'
+
+//Imports Pages
+import CarrinhoClient from './Componentes_Header/CarrinhoClient'
+import FooterCarrinho from './Componentes_Header/FooterCarrinho'
 
 const Carrinho = () => {
+    
     return (
         <>
             <Sheet>
@@ -34,13 +32,14 @@ const Carrinho = () => {
                     </div>
                 </SheetTrigger>
                 <SheetContent side='right' className="w-[80%] bg-black text-white border-none overflow-auto scrollbar-hide" >
-                    <SheetHeader>
-                        <SheetTitle className='text-left text-white ' >
+                    <SheetHeader className='relative min-h-full'>
+                        <SheetTitle className='text-left text-white'>
                             <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                         </SheetTitle>
                         <div className='ml-2' >
                             <CarrinhoClient />
                         </div>
+                        <FooterCarrinho />
                     </SheetHeader>
                 </SheetContent>
             </Sheet>

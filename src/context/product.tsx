@@ -12,22 +12,15 @@ export function AppWrapper({ children }: {
     const [tokenUser, setTokenUser] = useState(null)
     const [uid, setUid] = useState(null)
 
-    const [carrinho, setCarrinho] = useState(
-        typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('Carrinho') || '[]')
-            : [] // Empty array for Node.js builds
-    )
-
     const [productsSingle, setProductsSingle] = useState(
         typeof window !== 'undefined'
             ? JSON.parse(localStorage.getItem('ProductsSingle') || '[]')
-            : [] // Empty array for Node.js builds
+            : [] 
     );
 
     useEffect(() => {
         localStorage.setItem('ProductsSingle', JSON.stringify(productsSingle))
-        localStorage.setItem('Carrinho', JSON.stringify(carrinho))
-    }, [productsSingle, carrinho])
+    }, [productsSingle])
 
     return (
         <AppContext.Provider value={{
@@ -43,8 +36,6 @@ export function AppWrapper({ children }: {
             setTokenUser,
             productsSingle,
             setProductsSingle,
-            carrinho,
-            setCarrinho,
         }} >
             {children}
         </AppContext.Provider>

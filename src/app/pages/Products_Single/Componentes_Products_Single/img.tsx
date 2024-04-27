@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 //Imports Pages
 import Imgs_lados from './imgs_lados'
-import useAppContext from '@/context/page'
+import useAppContext from '@/context/product'
 
 const Img = ( {currentImg, setCurrentImg }:any) => {
     const { productsSingle, } = useAppContext()
