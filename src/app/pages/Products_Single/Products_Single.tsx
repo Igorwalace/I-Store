@@ -54,11 +54,11 @@ const Products_Single = () => {
   return (
     <>
       <main>
-        <div className='md:flex gap-3 justify-between items-start' >
+        <div className='md:flex gap-3 justify-between items-start md:px-10 bg-[#1A1A1A] md:bg-[#0B0B0B]' >
           <Img setCurrentImg={setCurrentImg} currentImg={currentImg} />
-          <div className="md:w-[35%] md:h-[618px] md:bg-[#1A1A1A] my-5 rounded-xl md:p-10 py-5">
+          <div className="md:w-[35%] md:h-[618px] bg-black md:bg-[#1A1A1A] rounded-t-3xl md:rounded-xl md:my-5 md:p-10 py-5 px-5 md:px-10">
 
-            <div className='md:hidden flex justify-start gap-4 mb-9' >
+            <div className='md:hidden flex justify-start gap-4 mb-9 rounded-2xl' >
               <Imgs_lados currentImg={currentImg} setCurrentImg={setCurrentImg} />
             </div>
 
@@ -127,7 +127,7 @@ const Products_Single = () => {
           </div>
         </div>
 
-        <div className="my-5 pb-10 text-[#ffff]">
+        <div className="my-5 pb-10 text-[#ffff] px-5 md:px-10">
           <div>
             <h1 className="md:text-lg text-base uppercase font-bold pl-1">Produtos Recomendados</h1>
           </div>

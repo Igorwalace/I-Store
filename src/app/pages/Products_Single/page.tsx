@@ -11,8 +11,8 @@ const Page = () => {
         <>
             <main className='px-5 md:px-10' >
                 <Header />
-                <Products_Single />
             </main>
+                <Products_Single />
                 <Footer />
         </>
     )

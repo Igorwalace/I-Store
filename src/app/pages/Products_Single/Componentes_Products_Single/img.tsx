@@ -12,7 +12,7 @@ const Img = ( {currentImg, setCurrentImg }:any) => {
 
     return (
         <>
-            <div className="md:w-[65%] md:h-[618px] h-[380px] w-full bg-[#1A1A1A] my-5 mb-0 rounded-xl flex items-center justify-center relative">
+            <div className="md:w-[65%] md:h-[618px] h-[380px] w-full bg-[#1A1A1A] md:my-5 -mt-1 mb-0 md:rounded-xl flex items-center justify-center relative">
                 <Image
                     className='w-[270px] h-[202px] md:w-[514px] md:h-[380px]'
                     src={currentImg}
