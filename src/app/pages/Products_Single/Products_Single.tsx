@@ -31,6 +31,10 @@ const Products_Single = () => {
   const handleAddCar = (img: string, title: string, price: string, id: number, oldPrice: number) => {
     const ItemCarrinho = carrinho.find((carrinho: any) => carrinho.id === id)
     if (ItemCarrinho) {
+      const updatedCarrinho = carrinho.map((item: any) =>
+        item.id === id ? { ...item, quantidade: item.quantidade + quant } : item
+      );
+      setCarrinho(updatedCarrinho)
       return
     }
     const newCarrinho = [

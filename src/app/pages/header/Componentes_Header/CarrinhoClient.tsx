@@ -75,6 +75,7 @@ const CarrinhoClient = () => {
     return (
         <>
             <div className='flex flex-col gap-4 my-5' >
+                {Carrinho.length < 1 && <div className='flex justify-center items-center font-thin' ><h1>Nenhum produto adicionado.</h1></div>}
                 {Carrinho.map((info) => (
                     <div key={info.id} >
                         <div className='flex items-center justify-between gap-3 w-full' >
