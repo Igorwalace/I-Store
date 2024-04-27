@@ -70,7 +70,7 @@ const CarrinhoClient = () => {
         setPriceTotal(Number(totalPrice))
         setPriceSubTotal(Number(totalSubPrice))
         setPriceDiscountTotal(Number(totalDiscount))
-    }, [Carrinho, priceTotal])
+    }, [Carrinho, priceTotal, setPriceDiscountTotal, setPriceSubTotal, setPriceTotal])
 
     return (
         <>
