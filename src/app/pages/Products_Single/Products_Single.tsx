@@ -91,8 +91,8 @@ const Products_Single = () => {
 
             <div className="my-5 space-y-3">
               <div>
-                <h1 className='text-[#ffff] font-extrabold md:text-3xl text-[22px]' >R$ {productsSingle.price.replace(".", ",")}</h1>
-                <h1 className='text-[#A1A1A1] font-extralight md:text-base text-sm line-through' >De: R$ {productsSingle.oldPrice.replace(".", ",")}</h1>
+                <h1 className='text-[#ffff] font-extrabold md:text-3xl text-[22px]' >R$ {String(productsSingle.price).replace(".", ",")}</h1>
+                <h1 className='text-[#A1A1A1] font-extralight md:text-base text-sm line-through' >De: R$ {String(productsSingle.oldPrice).replace(".", ",")}</h1>
               </div>
 
               <div className='flex items-center gap-2' >
