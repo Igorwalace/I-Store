@@ -36,7 +36,7 @@ const Carrinho = () => {
                         <SheetTitle className='text-left text-white'>
                             <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                         </SheetTitle>
-                        <div className='ml-2 max-h-[300px] scrollbar-hide overflow-auto' >
+                        <div className='ml-2 max-h-[320px] scrollbar-hide overflow-auto' >
                             <CarrinhoClient />
                         </div>
                         <FooterCarrinho />
