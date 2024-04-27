@@ -14,26 +14,22 @@ export function AppAuth({ children }: {
 
     const [photoUrl, setPhotoUrl] = useState<string | null>(
         typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('PhotoUrl') || '[]')
-            : ''
+            && JSON.parse(localStorage.getItem('PhotoUrl') || '[]')
     )
 
     const [infoUser, setInfoUser] = useState<any>(
         typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('InfoUser') || '[]')
-            : []
+            && JSON.parse(localStorage.getItem('InfoUser') || '[]')
     )
 
     const [tokenUser, setTokenUser] = useState<string | number>(
         typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('InfoUser') || '[]')
-            : ''
+            && JSON.parse(localStorage.getItem('InfoUser') || '[]')
     )
 
     const [uid, setUid] = useState<string | number>(
         typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('Uid') || '[]')
-            : ''
+            && JSON.parse(localStorage.getItem('Uid') || '[]')
     )
     
     useEffect(() => {
