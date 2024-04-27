@@ -1,13 +1,20 @@
 'use client'
+//Imports Contexto
 import useAppContext from '@/context/product'
+import useAppContextCarrinho from '@/context/contextCarrinho'
+
+//React
 import React, { useEffect, useState } from 'react'
+
+//Imports Pages
 import Img from './Componentes_Products_Single/img'
-import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
-import { CiDeliveryTruck } from 'react-icons/ci'
 import { Products } from '../produtos/ArrayProducts'
 import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
+
 import Imgs_lados from './Componentes_Products_Single/imgs_lados'
-import useAppContextCarrinho from '@/context/contextCarrinho'
+//React Icons
+import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
+import { CiDeliveryTruck } from 'react-icons/ci'
 
 const Products_Single = () => {
 
@@ -47,7 +54,6 @@ const Products_Single = () => {
         return
       }
       setQuant(quant - 1)
-
     }
   }
 

@@ -8,6 +8,7 @@ import Imgs_lados from './imgs_lados'
 import useAppContext from '@/context/product'
 
 const Img = ( {currentImg, setCurrentImg }:any) => {
+    
     const { productsSingle, } = useAppContext()
 
     return (
