@@ -179,5 +179,65 @@ export const Products= [
         quantidade: 2,
         newOrOld: 'novo',
         imagens_lados: ['/phone_1.png', '/phone_1_1.png', '/phone_1_2.png', '/phone_1_3.png']
+    },
+    {
+        id: 14,
+        img: '/phone_2.png',
+        title: 'H7 Razer H',
+        description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
+        type: 'Phone',
+        price: 59.52.toFixed(2),
+        oldPrice: 99.49.toFixed(2),
+        quantidade: 21,
+        newOrOld: 'novo',
+        imagens_lados: ['/phone_2.png', '/phone_2_1.png', '/phone_2_2.png', '/phone_2_3.png']
+    },
+    {
+        id: 15,
+        img: '/phone_3.png',
+        title: 'Hyper Cloud',
+        description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
+        type: 'Phone',
+        price: 109.99.toFixed(2),
+        oldPrice: 99.49.toFixed(2),
+        quantidade: 100,
+        newOrOld: 'novo',
+        imagens_lados: ['/phone_3.png', '/phone_3_1.png', '/phone_3_2.png', '/phone_3_3.png']
+    },
+    {
+        id: 16,
+        img: '/phone_4.png',
+        title: 'Astro 43',
+        description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
+        type: 'Phone',
+        price: 99.99.toFixed(2),
+        oldPrice: 149.99.toFixed(2),
+        quantidade: 21,
+        newOrOld: 'novo',
+        imagens_lados: ['/phone_4.png', '/phone_4_1.png', '/phone_4_2.png', '/phone_4_3.png']
+    },
+    {
+        id: 17,
+        img: '/phone_5.png',
+        title: 'Zone Wired',
+        description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
+        type: 'Phone',
+        price: 89.99.toFixed(2),
+        oldPrice: 99.49.toFixed(2),
+        quantidade: 12,
+        newOrOld: 'novo',
+        imagens_lados: ['/phone_5.png', '/phone_5_1.png', '/phone_5_2.png', '/phone_5_3.png']
+    },
+    {
+        id: 18,
+        img: '/phone_6.png',
+        title: 'Stinget T55',
+        description: 'Lorem ipsum dolor sit amet consectetur. Lacinia venenatis nunc nulla enim nulla vel pulvinar metus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lacinia venenatis nunc nulla enim nulla vel pulvinar metus.',
+        type: 'Phone',
+        price: 49.99.toFixed(2),
+        oldPrice: 59.49.toFixed(2),
+        quantidade: 12,
+        newOrOld: 'novo',
+        imagens_lados: ['/phone_6.png', '/phone_6_1.png', '/phone_6_2.png', '/phone_6_3.png']
     }
 ]
