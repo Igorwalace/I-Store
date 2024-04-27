@@ -31,12 +31,12 @@ const Carrinho = () => {
                         <FaCartShopping size={20} />
                     </div>
                 </SheetTrigger>
-                <SheetContent side='right' className="w-[80%] bg-black text-white border-none overflow-auto scrollbar-hide" >
-                    <SheetHeader className='relative min-h-full'>
+                <SheetContent side='right' className="w-[80%] h-full bg-black text-white border-none overflow-auto scrollbar-hide" >
+                    <SheetHeader className='relative h-full'>
                         <SheetTitle className='text-left text-white'>
                             <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                         </SheetTitle>
-                        <div className='ml-2' >
+                        <div className='ml-2 max-h-[300px] scrollbar-hide overflow-auto' >
                             <CarrinhoClient />
                         </div>
                         <FooterCarrinho />
