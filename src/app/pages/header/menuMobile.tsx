@@ -22,6 +22,9 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { BsBookmark } from 'react-icons/bs'
+import InfoMenuMobile from './Componentes_Header/infoMenuMobile'
+import Image from 'next/image'
+import TitleMenuMobile from './Componentes_Header/titleMenuMobile'
 
 const MenuMobile = () => {
     return (
@@ -35,14 +38,11 @@ const MenuMobile = () => {
                     </SheetTrigger>
                     <SheetContent side='left' className="w-[80%] bg-black text-white border-none" >
                         <SheetHeader>
-                            <SheetTitle className='text-left text-white ' >
-                                <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
+                            <SheetTitle className='text-left text-white pt-4' >
+                                <TitleMenuMobile />
                             </SheetTitle>
                             <div className='ml-2' >
-                                <div className='text-left m-1 pt-4 flex gap-2 items-center'>
-                                    <span><IoPerson size={20} /></span>
-                                    <h1>Login</h1>
-                                </div>
+                                <InfoMenuMobile />
                                 <Link href='/' className='text-left m-1 pt-4 flex gap-2 items-center'>
                                     <span><MdOutlineHome size={20} /></span>
                                     <h1>Home</h1>

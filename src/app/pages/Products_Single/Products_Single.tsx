@@ -15,11 +15,13 @@ import Imgs_lados from './Componentes_Products_Single/imgs_lados'
 //React Icons
 import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
 import { CiDeliveryTruck } from 'react-icons/ci'
+import useAppAuthContext from '@/context/auth'
 
 const Products_Single = () => {
 
   const { productsSingle } = useAppContext()
   const { setCarrinho, carrinho } = useAppContextCarrinho()
+  const { tokenUser } = useAppAuthContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.Img)
   const [quant, setQuant] = useState(1)
 
@@ -29,12 +31,17 @@ const Products_Single = () => {
   }, [productsSingle])
 
   const handleAddCar = (img: string, title: string, price: string, id: number, oldPrice: number) => {
+    if(!tokenUser){
+      alert('Faça login para continuar!')
+      return
+    }
+
     const ItemCarrinho = carrinho.find((carrinho: any) => carrinho.id === id)
     if (ItemCarrinho) {
-      const updatedCarrinho = carrinho.map((item: any) =>
+      const updatedCarrinhoProduct = carrinho.map((item: any) =>
         item.id === id ? { ...item, quantidade: item.quantidade + quant } : item
       );
-      setCarrinho(updatedCarrinho)
+      setCarrinho(updatedCarrinhoProduct)
       return
     }
     const newCarrinho = [
