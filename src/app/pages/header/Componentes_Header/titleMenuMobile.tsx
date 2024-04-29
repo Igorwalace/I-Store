@@ -15,6 +15,7 @@ const TitleMenuMobile = () => {
                 <Link href='/' className={`${comic_neue.className} text-4xl`} ><span className='text-[#5033C3]' >I</span>Store</Link>
                 {tokenUser &&
                     <div
+                        
                         className='border-[1px] border-[#2A2A2A] rounded-xl cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200'
                     >
                         <Image

@@ -11,6 +11,7 @@ import Carrinho from '../carrinho'
 //Imports Contexto
 import useAppAuthContext from '@/context/auth'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const IconPersonAuth = () => {
     const { handleLogin, uid, tokenUser, infoUser, photoUrl } = useAppAuthContext()
@@ -19,19 +20,20 @@ const IconPersonAuth = () => {
         <>
             <div className='flex flex-row-reverse items-center gap-4' >
                 {!tokenUser ?
-                    <div
-                        onClick={() => handleLogin()}
-                        className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200'
-                    >
-                        <IoPerson size={20} />
+                    <Link href='/auth' >
+                        <div
+                            className='border-[1px] border-[#2A2A2A] p-2 rounded cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200'
+                        >
+                            <IoPerson size={20} />
 
-                    </div>
+                        </div>
+                    </Link>
                     :
                     <div
                         className='border-[1px] border-[#2A2A2A] rounded-xl cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200'
                     >
                         <Image
-                            className='w-[30px] h-[30px] md:w-[30px] md:h-[30px] rounded-xl'
+                            className='w-[35px] h-[35px] md:w-[35px] md:h-[35px] rounded-xl'
                             src={photoUrl}
                             width={500}
                             height={500}
