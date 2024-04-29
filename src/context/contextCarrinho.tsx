@@ -7,18 +7,14 @@ export function AppContextCarrinho({ children }: {
     children: React.ReactNode;
 }) {
 
-    const [carrinho, setCarrinho] = useState(
-        typeof window !== 'undefined'
-            ? JSON.parse(localStorage.getItem('Carrinho') || '[]')
-            : []
-    )
+    const [carrinho, setCarrinho] = useState([])
     const [priceTotal, setPriceTotal] = useState(0)
     const [priceSubTotal, setPriceSubTotal] = useState(0)
     const [priceDisconutTotal, setPriceDiscountTotal] = useState(0)
-
-    useEffect(() => {
-        localStorage.setItem('Carrinho', JSON.stringify(carrinho))
-    }, [carrinho])
+    const [carrinhoFinal, setCarrinhoFinal] = useState<any[]>([]) 
+    const [carrinhoInfo, setCarrinhoInfo] = useState<any[]>([])
+    const [whatNumber, setWhatNumber] = useState(0)
+    const CarrinhoFinalArray:any[] = []
 
     return (
         <AppCarrinhoContext.Provider value={{
@@ -29,7 +25,14 @@ export function AppContextCarrinho({ children }: {
             priceSubTotal,
             setPriceSubTotal,
             priceDisconutTotal,
-            setPriceDiscountTotal
+            setPriceDiscountTotal,
+            carrinhoFinal,
+            setCarrinhoFinal,
+            CarrinhoFinalArray,
+            carrinhoInfo,
+            setCarrinhoInfo,
+            setWhatNumber,
+            whatNumber
         }} >
             {children}
         </AppCarrinhoContext.Provider>

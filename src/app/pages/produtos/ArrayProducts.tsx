@@ -1,5 +1,5 @@
 
-export const Products= [
+export const Products = [
     {
         id: 1,
         img: '/keyBoard_1.png',

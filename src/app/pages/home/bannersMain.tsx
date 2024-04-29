@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 //Imports Pages
 import InfoBannerMobile from './Componentes_Home/infoBannerMobile'
+import { Products } from '../produtos/ArrayProducts'
 
 const BannersMain = () => {
     return (
@@ -22,13 +23,20 @@ const BannersMain = () => {
                             <h1 className='md:text-base text-sm font-light' >em Mouses</h1>
                         </div>
                         <div>
-                            <Image
-                                className='w-[113px] h-[97px] md:w-[140px] md:h-[120px]'
-                                src="/mouse_banner.png"
-                                width={500}
-                                height={500}
-                                alt="cart"
-                            />
+                            {Products
+                                .filter(image => image.type == 'Mouse')
+                                .slice(0, 1)
+                                .map((image: any) => (
+                                    <Image
+                                        className='w-[113px] h-[97px] md:w-[140px] md:h-[120px]'
+                                        key={image.id}
+                                        src={image.img}
+                                        width={500}
+                                        height={500}
+                                        alt="cart"
+                                    />
+
+                                ))}
                         </div>
                     </div>
                 </Link>

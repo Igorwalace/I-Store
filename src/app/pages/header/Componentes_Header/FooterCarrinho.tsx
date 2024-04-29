@@ -6,10 +6,30 @@ import PrecoCarrinho from './precosCarrinho'
 
 //Import Contexto
 import useAppContextCarrinho from '@/context/contextCarrinho'
+import Link from 'next/link'
 
 const FooterCarrinho = () => {
 
-  const { carrinho } = useAppContextCarrinho()
+  const { setCarrinho, carrinho, setCarrinhoFinal, carrinhoFinal, setCarrinhoInfo, carrinhoInfo, whatNumber, setWhatNumber } = useAppContextCarrinho()
+
+  const addCart = (allProductsCart: any) => {
+    setWhatNumber(whatNumber + 1)
+    const day = new Date().getDate()
+    const year = new Date().getFullYear()
+    const data = `${day}/${year}`
+    const numero = Number(whatNumber + 1)
+    const status = 'Pago'
+    setCarrinhoFinal([...carrinhoFinal, allProductsCart])
+    setCarrinhoInfo([
+      ...carrinhoInfo,
+      {
+        data: data,
+        numero: numero,
+        status: status
+      }
+    ])
+    setCarrinho([])
+  }
 
   return (
     <>
@@ -18,9 +38,11 @@ const FooterCarrinho = () => {
           <div className='p-3' >
             <PrecoCarrinho />
           </div>
-          <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' >
-            <button>Finalizar Compra</button>
-          </div>
+          <Link href='/pages/meusPedidos' >
+            <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' onClick={() => addCart({ ...carrinho })}>
+              <button>Finalizar Compra</button>
+            </div>
+          </Link>
         </div>
       }
     </>

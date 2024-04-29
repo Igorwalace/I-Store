@@ -31,7 +31,7 @@ const IconPersonAuth = () => {
                         className='border-[1px] border-[#2A2A2A] rounded-xl cursor-pointer hover:scale-110 hover:text-[#c1c1c1] duration-200'
                     >
                         <Image
-                            className='w-[40px] h-[40px] md:w-[40px] md:h-[40px] rounded-xl'
+                            className='w-[30px] h-[30px] md:w-[30px] md:h-[30px] rounded-xl'
                             src={photoUrl}
                             width={500}
                             height={500}

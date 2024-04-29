@@ -27,7 +27,7 @@ const Header = () => {
                             <li className='text-[#2A2A2A]' >|</li>
                             <Link href='/pages/catalogo' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Catálogo</Link>
                             <li className='text-[#2A2A2A]' >|</li>
-                            <Link href='/' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Ofertas</Link>
+                            <Link href='/pages/meusPedidos' className='hover:scale-105 hover:text-[#c1c1c1] duration-200'>Meus Pedidos</Link>
                         </ul>
                     </nav>
                     <IconPersonAuth />

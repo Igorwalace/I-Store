@@ -13,11 +13,8 @@ export function AppAuth({ children }: {
     const provider = new GoogleAuthProvider();
 
     const [photoUrl, setPhotoUrl] = useState<string | null>()
-
     const [infoUser, setInfoUser] = useState<any>()
-
     const [tokenUser, setTokenUser] = useState<string | number>()
-
     const [uid, setUid] = useState<string | number>()
 
     const handleLogin = async () => {

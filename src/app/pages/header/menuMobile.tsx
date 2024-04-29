@@ -55,7 +55,7 @@ const MenuMobile = () => {
                                             <RiStoreLine size={20} />
                                             <h1>Ofertas</h1>
                                         </div> */}
-                                <Link href='/' className='text-left m-1 pt-4 flex gap-2 items-center'>
+                                <Link href='/pages/meusPedidos' className='text-left m-1 pt-4 flex gap-2 items-center'>
                                     <span><IoBagOutline size={20} /></span>
                                     <h1>Meus Pedidos</h1>
                                 </Link>
