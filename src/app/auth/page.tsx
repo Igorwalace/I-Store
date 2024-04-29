@@ -22,7 +22,7 @@ const Auth = () => {
     const router = useRouter();
 
     const [isButtonNot, setIsButtonNot] = useState<boolean>(false)
-    const { handleLogin, uid, tokenUser, infoUser, photoUrl } = useAppAuthContext()
+    const { handleLogin, tokenUser} = useAppAuthContext()
 
     useEffect(() => {
         if (isButtonNot) {
