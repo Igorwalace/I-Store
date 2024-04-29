@@ -190,7 +190,7 @@ const Products_Single = () => {
         </div>
       )}
       {isAddCart && ( 
-        <div className='flex justify-center items-center md:text-base text-sm ' >
+        <div className='flex justify-center items-center md:text-base text-sm' >
           <div
             className="fixed bottom-[40px] bg-[#32D657] rounded-xl md:min-w-[30%] p-2 flex justify-center gap-2 items-center z-[100] hover:scale-105 duration-200 cursor-pointer"
             onClick={() => {
