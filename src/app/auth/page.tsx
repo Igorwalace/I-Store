@@ -65,7 +65,7 @@ const Auth = () => {
                         <FaFacebook size={20} />
                         Continuar com Facebook
                     </button>
-                    <button className="flex justify-center items-center gap-3 bg-black text-white rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={() => { setIsButtonNot(true) }}>
+                    <button className="border-[1px] border-[#2A2A2A] flex justify-center items-center gap-3 bg-black text-white rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={() => { setIsButtonNot(true) }}>
                         <FaApple size={20} />
                         Continuar com Apple
                     </button>
