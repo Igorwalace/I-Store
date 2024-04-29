@@ -14,13 +14,13 @@ const FooterCarrinho = () => {
 
   const addCart = (allProductsCart: any) => {
     setWhatNumber(whatNumber + 1)
-    const date = new Date().getDate()
-    const day = new Date().getDay()
+    const date = new Date().getMonth()
+    const day = new Date().getDate()
     const year = new Date().getFullYear()
     const data = `${day}/${date}/${year}`
     const numero = Number(whatNumber + 1)
     const status = 'Pago'
-    
+
     const info = ([
       {
         data: data,

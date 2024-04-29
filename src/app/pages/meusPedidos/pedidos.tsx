@@ -8,7 +8,7 @@ const Pedidos = () => {
     const { carrinho, setCarrinhoFinal, carrinhoFinal, carrinhoInfo, meusPedidos } = useAppContextCarrinho()
     return (
         <>
-            {carrinhoInfo == 0 && <div className='text-center mt-5 flex justify-center items-center' >Você nâo tem pedidos.</div>}
+            {meusPedidos == 0 && <div className='text-center mt-5 flex justify-center items-center' >Você nâo tem pedidos.</div>}
 
             {meusPedidos.map((info: any, index: any) => (
                 <div key={index} className='border-[1px] border-[#2A2A2A] p-3 rounded-xl my-5'  >
