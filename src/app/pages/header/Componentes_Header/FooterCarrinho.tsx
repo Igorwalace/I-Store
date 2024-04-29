@@ -10,25 +10,38 @@ import Link from 'next/link'
 
 const FooterCarrinho = () => {
 
-  const { setCarrinho, carrinho, setCarrinhoFinal, carrinhoFinal, setCarrinhoInfo, carrinhoInfo, whatNumber, setWhatNumber } = useAppContextCarrinho()
+  const { setCarrinho, carrinho, setCarrinhoFinal, carrinhoFinal, setCarrinhoInfo, carrinhoInfo, whatNumber, setWhatNumber, priceTotal, priceSubTotal, priceDisconutTotal, setMeusPedidos } = useAppContextCarrinho()
 
   const addCart = (allProductsCart: any) => {
     setWhatNumber(whatNumber + 1)
-    const day = new Date().getDate()
+    const date = new Date().getDate()
+    const day = new Date().getDay()
     const year = new Date().getFullYear()
-    const data = `${day}/${year}`
+    const data = `${day}/${date}/${year}`
     const numero = Number(whatNumber + 1)
     const status = 'Pago'
-    setCarrinhoFinal([...carrinhoFinal, allProductsCart])
-    setCarrinhoInfo([
-      ...carrinhoInfo,
+    
+    const info = ([
       {
         data: data,
         numero: numero,
         status: status
       }
     ])
-    setCarrinho([])
+    const prices = [
+      {
+        total: priceTotal,
+        subTotal: priceSubTotal,
+        desconto: priceDisconutTotal
+      }
+    ]
+    const newOrder = {
+      allProductsCart,
+      info,
+      prices
+    };
+
+    setMeusPedidos((prevOrders:any) => [...prevOrders, newOrder]);
   }
 
   return (
@@ -38,11 +51,11 @@ const FooterCarrinho = () => {
           <div className='p-3' >
             <PrecoCarrinho />
           </div>
-          <Link href='/pages/meusPedidos' >
-            <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' onClick={() => addCart({ ...carrinho })}>
-              <button>Finalizar Compra</button>
-            </div>
-          </Link>
+          {/* <Link href='/pages/meusPedidos' > */}
+          <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' onClick={() => addCart({ ...carrinho })}>
+            <button>Finalizar Compra</button>
+          </div>
+          {/* </Link> */}
         </div>
       }
     </>

@@ -8,6 +8,7 @@ import useAppContextCarrinho from '@/context/contextCarrinho'
 const PrecoCarrinho = () => {
 
     const { priceTotal, priceSubTotal, priceDisconutTotal } = useAppContextCarrinho()
+    
     return (
         <>
             <main className='font-extralight' >
