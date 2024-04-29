@@ -13,7 +13,6 @@ export function AppContextCarrinho({ children }: {
     const [priceDisconutTotal, setPriceDiscountTotal] = useState(0)
     const [carrinhoFinal, setCarrinhoFinal] = useState<any[]>([])
     const [meusPedidos, setMeusPedidos] = useState<any[]>([])
-    const [carrinhoInfo, setCarrinhoInfo] = useState<any[]>([])
     const [whatNumber, setWhatNumber] = useState(0)
     const CarrinhoFinalArray:any[] = []
 
@@ -30,8 +29,6 @@ export function AppContextCarrinho({ children }: {
             carrinhoFinal,
             setCarrinhoFinal,
             CarrinhoFinalArray,
-            carrinhoInfo,
-            setCarrinhoInfo,
             setWhatNumber,
             whatNumber,
             meusPedidos,

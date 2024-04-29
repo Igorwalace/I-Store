@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const FooterCarrinho = () => {
 
-  const { setCarrinho, carrinho, setCarrinhoFinal, carrinhoFinal, setCarrinhoInfo, carrinhoInfo, whatNumber, setWhatNumber, priceTotal, priceSubTotal, priceDisconutTotal, setMeusPedidos } = useAppContextCarrinho()
+  const { setCarrinho, carrinho, whatNumber, setWhatNumber, priceTotal, priceSubTotal, priceDisconutTotal, setMeusPedidos } = useAppContextCarrinho()
 
   const addCart = (allProductsCart: any) => {
     setWhatNumber(whatNumber + 1)
@@ -42,6 +42,7 @@ const FooterCarrinho = () => {
     };
 
     setMeusPedidos((prevOrders:any) => [...prevOrders, newOrder]);
+    setCarrinho([])
   }
 
   return (
@@ -51,11 +52,11 @@ const FooterCarrinho = () => {
           <div className='p-3' >
             <PrecoCarrinho />
           </div>
-          {/* <Link href='/pages/meusPedidos' > */}
+          <Link href='/pages/meusPedidos' >
           <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' onClick={() => addCart({ ...carrinho })}>
             <button>Finalizar Compra</button>
           </div>
-          {/* </Link> */}
+          </Link>
         </div>
       }
     </>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { IoIosArrowDown } from 'react-icons/io'
 
 const Pedidos = () => {
-    const { carrinho, setCarrinhoFinal, carrinhoFinal, carrinhoInfo, meusPedidos } = useAppContextCarrinho()
+    const { meusPedidos } = useAppContextCarrinho()
     return (
         <>
             {meusPedidos == 0 && <div className='text-center mt-5 flex justify-center items-center' >Você nâo tem pedidos.</div>}
@@ -25,7 +25,7 @@ const Pedidos = () => {
                                 </div>
                                 <div>
                                     <h1 className='md:text-base text-sm' >Status</h1>
-                                    <h1 className='md:text-sm text-xs text-[#A1A1A1]' >{infoCar.status}</h1>
+                                    <h1 className='md:text-sm text-xs text-[#8162FF]' >{infoCar.status}</h1>
                                 </div>
                                 <div>
                                     <h1 className='md:text-base text-sm' >Data</h1>

@@ -13,9 +13,10 @@ import InfoProductsSingle from '../Componentes_Globais/infoProductsSingle'
 
 import Imgs_lados from './Componentes_Products_Single/imgs_lados'
 //React Icons
-import { FaArrowLeft, FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight, FaRegCheckCircle, FaRegStar, FaStar } from 'react-icons/fa'
 import { CiDeliveryTruck } from 'react-icons/ci'
 import useAppAuthContext from '@/context/auth'
+import { IoMdInformationCircleOutline } from 'react-icons/io'
 
 const Products_Single = () => {
 
@@ -23,6 +24,8 @@ const Products_Single = () => {
   const { setCarrinho, carrinho } = useAppContextCarrinho()
   const { tokenUser } = useAppAuthContext()
   const [currentImg, setCurrentImg] = useState(productsSingle.Img)
+  const [isLogin, setIsLogin] = useState<boolean>(false)
+  const [isAddCart, setIsAddCart] = useState<boolean>(false)
   const [quant, setQuant] = useState(1)
 
   useEffect(() => {
@@ -31,8 +34,8 @@ const Products_Single = () => {
   }, [productsSingle])
 
   const handleAddCar = (img: string, title: string, price: string, id: number, oldPrice: number) => {
-    if(!tokenUser){
-      alert('Faça login para continuar!')
+    if (!tokenUser) {
+      setIsLogin(true)
       return
     }
 
@@ -42,6 +45,7 @@ const Products_Single = () => {
         item.id === id ? { ...item, quantidade: item.quantidade + quant } : item
       );
       setCarrinho(updatedCarrinhoProduct)
+      setIsAddCart(true)
       return
     }
     const newCarrinho = [
@@ -56,6 +60,7 @@ const Products_Single = () => {
       },
     ];
     setCarrinho(newCarrinho)
+    setIsAddCart(true)
   }
   const handleAddMoreQuant = (value: string) => {
     if (value == 'More') {
@@ -67,6 +72,15 @@ const Products_Single = () => {
       setQuant(quant - 1)
     }
   }
+
+  useEffect(() => {
+    if (isLogin || isAddCart) {
+      setTimeout(() => {
+        setIsLogin(false)
+        setIsAddCart(false)
+      }, 3000);
+    }
+  }, [isLogin, isAddCart])
 
   return (
     <>
@@ -161,6 +175,34 @@ const Products_Single = () => {
           </div>
         </div>
       </main>
+      {isLogin && (
+        <div className='flex justify-center items-center' >
+          <div
+            className="fixed bottom-[40px] bg-[#DD524C] rounded-xl md:min-w-[30%] p-2 flex justify-center gap-2 items-center z-[100] hover:scale-105 duration-200 cursor-pointer"
+            onClick={() => {
+              setIsLogin(false)
+            }}
+            id="alert"
+          >
+            <IoMdInformationCircleOutline size={20} />
+            <h1>Faça login para continuar</h1>
+          </div>
+        </div>
+      )}
+      {isAddCart && (
+        <div className='flex justify-center items-center' >
+          <div
+            className="fixed bottom-[40px] bg-[#32D657] rounded-xl md:min-w-[30%] p-2 flex justify-center gap-2 items-center z-[100] hover:scale-105 duration-200 cursor-pointer"
+            onClick={() => {
+              setIsAddCart(false)
+            }}
+            id="alert"
+          >
+            <FaRegCheckCircle size={20} />
+            <h1>Produto Adicionado no carrinho</h1>
+          </div>
+        </div>
+      )}
     </>
   )
 }
