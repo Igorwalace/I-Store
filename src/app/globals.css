@@ -5,6 +5,19 @@
 #banner {
     background-image: url('../../public/banner.jfif');
 }
+@keyframes is-rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+#c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #2A2A2A;
+    border-radius: 50%;
+    border-top-color: #5033C3;
+    height: 50px;
+    width: 50px;
+}
 
 @layer base {
     :root {

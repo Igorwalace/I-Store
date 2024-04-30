@@ -2,7 +2,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 
 //FireBase
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { auth } from "@/app/pages/firebase/firebaseConfig";
 
 export const AppAuthContexto = createContext<any>(undefined);
@@ -10,15 +10,16 @@ export const AppAuthContexto = createContext<any>(undefined);
 export function AppAuth({ children }: {
     children: React.ReactNode;
 }) {
-    const provider = new GoogleAuthProvider();
+    const providerGoogle = new GoogleAuthProvider();
+    const providerFacebook = new FacebookAuthProvider();
 
     const [photoUrl, setPhotoUrl] = useState<string | null>()
     const [infoUser, setInfoUser] = useState<any>()
     const [tokenUser, setTokenUser] = useState<string | number>()
     const [uid, setUid] = useState<string | number>()
 
-    const handleLogin = async () => {
-        await signInWithPopup(auth, provider)
+    const handleLoginGoogle = async () => {
+        await signInWithPopup(auth, providerGoogle)
             .then((result) => {
                 const credential: any = GoogleAuthProvider.credentialFromResult(result);
                 const token: any = credential.accessToken;
@@ -32,8 +33,26 @@ export function AppAuth({ children }: {
                 const errorMessage = error.message;
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
-                console.log(error)
+                alert(errorMessage)
             });
+    }
+
+    const handleLoginFacebook = async () => {
+        await signInWithPopup(auth, providerFacebook)
+            .then((result) => {
+                const user = result.user;
+                const credential: any = FacebookAuthProvider.credentialFromResult(result);
+                const accessToken: any = credential.accessToken;
+                console.log(user)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                const email = error.customData.email;
+                const credential = FacebookAuthProvider.credentialFromError(error);
+                alert(errorMessage)
+            });
+
     }
 
     return (
@@ -44,8 +63,9 @@ export function AppAuth({ children }: {
             setUid,
             tokenUser,
             setTokenUser,
-            handleLogin,
-            photoUrl
+            handleLoginGoogle,
+            photoUrl,
+            handleLoginFacebook
         }} >
             {children}
         </AppAuthContexto.Provider>

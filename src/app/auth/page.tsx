@@ -22,7 +22,7 @@ const Auth = () => {
     const router = useRouter();
 
     const [isButtonNot, setIsButtonNot] = useState<boolean>(false)
-    const { handleLogin, tokenUser} = useAppAuthContext()
+    const { handleLoginGoogle, handleLoginFacebook, tokenUser} = useAppAuthContext()
 
     useEffect(() => {
         if (isButtonNot) {
@@ -57,11 +57,11 @@ const Auth = () => {
                     </div>
                 </div>
                 <div className='my-5 flex flex-col justify-center items-center gap-5 h-[60vh]' >
-                    <button className="flex justify-center items-center gap-3 bg-white text-black rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={handleLogin}>
+                    <button className="flex justify-center items-center gap-3 bg-white text-black rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={handleLoginGoogle}>
                         <FcGoogle size={20} />
                         Continuar com Google
                     </button>
-                    <button className="flex justify-center items-center gap-3 bg-[#3669b7] text-white rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={() => { setIsButtonNot(true) }}>
+                    <button className="flex justify-center items-center gap-3 bg-[#3669b7] text-white rounded-xl outline-none py-2 px-5 hover:scale-105 duration-200 w-[360px]" onClick={handleLoginFacebook}>
                         <FaFacebook size={20} />
                         Continuar com Facebook
                     </button>

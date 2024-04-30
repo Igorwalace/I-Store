@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 
 //imports Pages
 import PrecoCarrinho from './precosCarrinho'
@@ -7,10 +7,13 @@ import PrecoCarrinho from './precosCarrinho'
 //Import Contexto
 import useAppContextCarrinho from '@/context/contextCarrinho'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const FooterCarrinho = () => {
 
   const { setCarrinho, carrinho, whatNumber, setWhatNumber, priceTotal, priceSubTotal, priceDisconutTotal, setMeusPedidos } = useAppContextCarrinho()
+  const [modal, setModal] = useState(false)
+  const router = useRouter();
 
   const addCart = (allProductsCart: any) => {
     setWhatNumber(whatNumber + 1)
@@ -41,8 +44,12 @@ const FooterCarrinho = () => {
       prices
     };
 
-    setMeusPedidos((prevOrders:any) => [...prevOrders, newOrder]);
-    setCarrinho([])
+    setMeusPedidos((prevOrders: any) => [...prevOrders, newOrder]);
+    setModal(true)
+    setTimeout(() => {
+      router.push('/pages/meusPedidos')
+      setCarrinho([])
+    }, 3000);
   }
 
   return (
@@ -52,11 +59,16 @@ const FooterCarrinho = () => {
           <div className='p-3' >
             <PrecoCarrinho />
           </div>
-          <Link href='/pages/meusPedidos' >
+          {/* <Link href='/pages/meusPedidos' > */}
           <div className='w-full my-1 cursor-pointer p-2 rounded-xl bg-[#5033C3] uppercase text-center hover:scale-105 duration-200' onClick={() => addCart({ ...carrinho })}>
             <button>Finalizar Compra</button>
           </div>
-          </Link>
+          {/* </Link> */}
+        </div>
+      }
+      {modal &&
+        <div className='fixed top-0 right-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center' >
+          <div id='c-loader' ></div>
         </div>
       }
     </>
