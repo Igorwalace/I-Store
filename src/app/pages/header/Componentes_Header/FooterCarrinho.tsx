@@ -49,7 +49,8 @@ const FooterCarrinho = () => {
     setTimeout(() => {
       router.push('/pages/meusPedidos')
       setCarrinho([])
-    }, 3000);
+      setModal(false)
+    }, 2000);
   }
 
   return (
@@ -67,8 +68,9 @@ const FooterCarrinho = () => {
         </div>
       }
       {modal &&
-        <div className='fixed top-0 right-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center' >
+        <div className='fixed top-0 right-0 bottom-0 left-0 bg-[rgba(0,0,0,0.5)] flex flex-col gap-2 justify-center items-center' >
           <div id='c-loader' ></div>
+          <span>Finalizando pedido</span>
         </div>
       }
     </>
